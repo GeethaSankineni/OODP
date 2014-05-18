@@ -52,5 +52,47 @@ public class Card {
 	
 	private boolean isFaceUp;
 	
+/*
+ * Create Card with 3 attributes
+ * */
+	
+	
+	public Card(int suit, int face, boolean faceDir) {
+		this.suit = suit;
+		this.face = face;
+		this.isFaceUp = faceDir;
+	}
 
+	/*
+	 * Create Card with 2 attributes
+	 * */
+			
+	public Card(int suit, int face) {
+		this.suit = suit;
+		this.face = face;
+		this.isFaceUp = true;
+	}
+	
+	/**
+	 * Gets the color of the card
+	 * 
+	 * @return Color of the card as a String
+	 */
+	public String getColorName() {
+		if (suit == 0 || suit == 2)
+			return "Red";
+		else
+			return "Black";
+	}
+
+	/**
+	 * Gets the face, or the name, of the Card
+	 * 
+	 * @return Face of the Card
+	 */
+	public int getFace() {
+		return face;
+	}
+
+	
 }
