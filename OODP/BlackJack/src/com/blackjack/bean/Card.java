@@ -119,7 +119,29 @@ public class Card {
 		} else {
 			return high;
 		}
+		
+	}
+	/**
+	 * Gets the lowest value of the card
+	 * 
+	 * @return integer of the lowest possible value of the card
+	 */
+	public int getLowValue() {
+		int low = getValue();
+		if (low == 1) {
+			return 1;
+		} else {
+			return low;
+		}
 	}
 
+	/**
+	 * Flips the card orientation
+	 */
+	public void flip() {
+		isFaceUp = !isFaceUp;
+	}
+
+	
 	
 }
