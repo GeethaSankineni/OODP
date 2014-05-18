@@ -93,6 +93,33 @@ public class Card {
 	public int getFace() {
 		return face;
 	}
+	/**
+	 * Gets the value of the Card Uses the face of the Card to calculate the
+	 * value Ace is 1, 2-9 are itself, 10 and higher are 10
+	 * 
+	 * @return value of the card
+	 */
+	public int getValue() {
+		if (face >= TWO && face < TEN)
+			return face;
+		else if (face >= TEN)
+			return 10;
+		return 1;
+	}
+
+	/**
+	 * Gets the highest value of the card
+	 * 
+	 * @return integer of the highest possible value of the card
+	 */
+	public int getHighValue() {
+		int high = getValue();
+		if (high == 1) {
+			return 11;
+		} else {
+			return high;
+		}
+	}
 
 	
 }
