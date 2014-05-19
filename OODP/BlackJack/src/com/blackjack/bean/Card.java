@@ -142,6 +142,79 @@ public class Card {
 		isFaceUp = !isFaceUp;
 	}
 
-	
-	
+	/**
+	 * Tells whether the cards is face up
+	 * 
+	 * @return boolean representing whether the card is face up or down
+	 */
+	public boolean isFaceUp() {
+		return isFaceUp;
+	}
+
+	/**
+	 * Gets the suit of the card
+	 * 
+	 * @return integer value of the suit of the Card
+	 */
+	public int getSuit() {
+		return suit;
+	}
+
+	/**
+	 * Gets the suit name in a string
+	 * 
+	 * @return String with the suit of the card
+	 */
+	public String getSuitName() {
+		switch (suit) {
+		case DIAMONDS:
+			return "Diamonds";
+		case CLUBS:
+			return "Clubs";
+		case HEARTS:
+			return "Hearts";
+		case SPADES:
+			return "Spades";
+		default:
+			return "Error: No Case";
+		}
+	}
+	/**
+	 * Gets the face name in a string
+	 * 
+	 * @return String with the face of the card
+	 */
+	public String getFaceName() {
+		switch (face) {
+		case ACE:
+			return "Ace";
+		case TWO:
+			return "Two";
+		case THREE:
+			return "Three";
+		case FOUR:
+			return "Four";
+		case FIVE:
+			return "Five";
+		case SIX:
+			return "Six";
+		case SEVEN:
+			return "Seven";
+		case EIGHT:
+			return "Eight";
+		case NINE:
+			return "Nine";
+		case TEN:
+			return "Ten";
+		case JACK:
+			return "Jack";
+		case QUEEN:
+			return "Queen";
+		case KING:
+			return "King";
+		default:
+			return "Error: No Face";
+		}
+	}
+
 }
