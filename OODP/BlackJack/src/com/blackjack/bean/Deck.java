@@ -48,6 +48,24 @@ public Deck() {
 		count = 0;
 		numCardsRemaining = BlackJackUtil.NUM_DECKS * BlackJackUtil.CARDS_IN_DECK;
 	}
+	/**
+	 * Draws a card from the deck
+	 * 
+	 * @return Card card from the top of the Deck Shoe
+	 */
+	public Card draw() {
+		Card toDraw = this.deck.get(0);
+
+		this.deck.remove(0);
+		numCardsRemaining--;
+		int face = toDraw.getFace();
+		if (face >= 1 && face <= 5)
+			count++;
+		if (face >= 9 || face == Card.ACE)
+			count--;
+
+		return toDraw;
+	}
 
 
 }
