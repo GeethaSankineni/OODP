@@ -7,6 +7,7 @@ public class BlackJackUtil {
 	
 	public final static int SUITS_IN_DECK = 4;
 	
+	public final static int CARDS_IN_DECK = 52;
 	
 	
 	

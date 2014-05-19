@@ -5,12 +5,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+import java.util.Random;
+
 import com.blackjack.GUI.BlackJackUtil;
 
 public class Deck {
 private List<Card> deck;
 	
-	
+private int numCardsRemaining;
+private int count;
 public Deck() {
 		
 		this.deck = new ArrayList<Card>();
@@ -27,7 +30,24 @@ public Deck() {
 	 * Shuffles the deck
 	 */
 
-public void shuffle() {
 
-}
+	public void shuffle() {
+		ArrayList<Card> tempDeck = new ArrayList<Card>();
+		Random random = new Random();
+		while (this.deck.size() > 0) {
+			int cardToRemove = random.nextInt(this.deck.size());
+			Card tempCard = this.deck.get(cardToRemove);
+			this.deck.remove(cardToRemove);
+			tempDeck.add(tempCard);
+		}
+		while (tempDeck.size() > 0) {
+			Card tempCard = tempDeck.get(0);
+			tempDeck.remove(0);
+			this.deck.add(tempCard);
+		}
+		count = 0;
+		numCardsRemaining = BlackJackUtil.NUM_DECKS * BlackJackUtil.CARDS_IN_DECK;
+	}
+
+
 }
