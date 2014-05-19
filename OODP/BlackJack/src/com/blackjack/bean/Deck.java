@@ -66,6 +66,26 @@ public Deck() {
 
 		return toDraw;
 	}
-	
+	/**
+	 * Gets the current card count
+	 * 
+	 * @return Integer representing the current card count
+	 */
+	public int getCount() {
+		double decksLeft = (double) numCardsRemaining / BlackJackUtil.CARDS_IN_DECK;
+		return (int) Math.round(count / decksLeft);
+	}
+
+	/**
+	 * Adds a card to the bottom of the deck
+	 * 
+	 * @param c -	Card to be added the bottom of the deck
+	 */
+	public void addToBottom(Card c) {
+		this.deck.add(c);
+		if (numCardsRemaining < 20) {
+			shuffle();
+		}
+	}
 
 }
