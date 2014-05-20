@@ -55,6 +55,23 @@ public class Hand {
 	public boolean isBusted() {
 		return getBestValue() > 21;
 	}
+	/**
+	 * Hand is Blackjack if and only if it has 2 cards: an Ace and a 10/Jack/Queen/King
+	 * 
+	 * @return boolean representing whether the Hand is BlackJack
+	 */
+	public boolean isBlackJack() {
+		boolean hasAce = false;
+		boolean hasTen = false;
+		for (int i = 0; i < INITIAL_HAND_SIZE; i++) {
+			if (this.playerHand.get(i).getFace() == Card.ACE)
+				hasAce = true;
+			if (this.playerHand.get(i).getValue() == 10)
+				hasTen = true;
+		}
+		return hasAce && hasTen;
+	}
+
 
 	}
 	
