@@ -94,6 +94,25 @@ public class Hand {
 	public void addCard(Card card) {
 		this.playerHand.add(card);
 	}
+	/**
+	 * Gets the card at index position of the hand
+	 * 
+	 * @param index - Position of the card to be retrieved
+	 * @return Card at position index
+	 */
+	public Card get(int index) {
+		return this.playerHand.get(index);
+	}
+	
+
+	/**
+	 * Gets the number of cards in the Hand
+	 * 
+	 * @return Integer value of the cards in the hand
+	 */
+	public int length() {
+		return this.playerHand.size();
+	}
 
 	}
 	
