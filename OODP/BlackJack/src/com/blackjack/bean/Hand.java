@@ -47,7 +47,15 @@ public class Hand {
 		}
 		return totalValue;
 	}
-	
+	/**
+	 * Tells whether the hand has busted
+	 * 
+	 * @return boolean representing whether the Hand has busted
+	 */
+	public boolean isBusted() {
+		return getBestValue() > 21;
+	}
+
 	}
 	
 	
