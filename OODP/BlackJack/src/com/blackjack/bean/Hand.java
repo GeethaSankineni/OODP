@@ -72,6 +72,28 @@ public class Hand {
 		return hasAce && hasTen;
 	}
 
+	/**
+	 * Removes the cards from the hand and returns them in an ArrayList
+	 * 
+	 * @return ArrayList containing the removed cards
+	 */
+	public ArrayList<Card> clearHand() {
+		ArrayList<Card> removedHandCards = new ArrayList<Card>();
+		for (int i = 0; i < this.playerHand.size(); i++) {
+			removedHandCards.add(this.playerHand.get(i));
+		}
+		this.playerHand.clear();
+		return removedHandCards;
+	}
+	
+	/**
+	 * Adds a card to the hand
+	 * 
+	 * @param toAdd - The Card to be added to the Hand
+	 */
+	public void addCard(Card card) {
+		this.playerHand.add(card);
+	}
 
 	}
 	
