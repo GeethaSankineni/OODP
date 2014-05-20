@@ -24,5 +24,31 @@ public class Hand {
 		this.playerHand.add(card1);
 		this.playerHand.add(card2);
 	}
+	/**
+	 * Gets the best(highest) value of the hand
+	 * 
+	 * @return Integer value of the hand
+	 */
+	public int getBestValue() {
+		int totalValue = 0;
+		for (Card card : this.playerHand) {
+			if (card.getFace() != Card.ACE) {
+				totalValue += card.getValue();
+			}
+		}
+		for (Card card : this.playerHand) {
+			if (card.getFace() == Card.ACE) {
+				if (totalValue + card.getHighValue() <= 21) {
+					totalValue += card.getHighValue();
+				} else {
+					totalValue += card.getLowValue(); // 1
+				}
+			}
+		}
+		return totalValue;
+	}
 	
-}
+	}
+	
+	
+
