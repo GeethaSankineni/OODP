@@ -25,6 +25,22 @@ package com.blackjack.GUI;
 			gameWindow.setButtonState(true, true);// Will enable hit and stand buttons
 			
 
+
+		/**
+		 * By default/First turn it is true, After that it will be set based 
+		 * on the game state
+		 */
+		while (gameWindow.isTurnContinue()) {
+			gameWindow.repaint();
+		}
+		
+		gameWindow.setButtonState(false, false); //Disable buttons 
+		gameWindow.repaint();
+		gameWindow.doDealerTurn();
+		gameWindow.repaint();
+		gameWindow.doPayOuts();
+		gameWindow.reset();
+	}
 }
-}
+	
 	

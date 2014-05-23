@@ -2,12 +2,16 @@ package com.blackjack.GUI;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URL;
 
 import javax.swing.BorderFactory;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import com.blackjack.bean.Card;
@@ -23,13 +27,15 @@ import com.blackjack.bean.Hand;
 
 		
 		
-		private DealerPanel dealer;
+		private static final long serialVersionUID = 1L;
+		
+		//private DealerPanel dealer;
 		
 		private PlayerPanel humanPlayer;
 		
-		private ChoicePanel playerChoices;
+		//private ChoicePanel playerChoices;
 		
-		private Deck deck;
+		//private Deck deck;
 		
 		private boolean turnContinue;
 		private Image cardImages;	
@@ -62,12 +68,46 @@ import com.blackjack.bean.Hand;
 			
 			
 		}
-		private void loadImages() {
+
+			
+		
+         private void loadImages() {
+		
+				ClassLoader cl = GameWindow.class.getClassLoader();
+				URL imageURL = cl.getResource("cards.png");
+				if (imageURL != null){
+					this.cardImages = Toolkit.getDefaultToolkit().createImage(imageURL);
+				} else {
+					String errorMsg = "Card image file loading failed.";
+					JOptionPane.showMessageDialog(this, errorMsg, "Error",JOptionPane.ERROR_MESSAGE);
+					System.exit(1);
+				}
+			}
+
+		
+		/**
+		 * Responds to button presses from the ChoicePanel.
+		 * 
+		 * @param a
+		 *            The event that will be responded to
+		 */
+
+		@Override
+		public void actionPerformed(ActionEvent a) {
+		
+			// TODO Auto-generated method stub
+			String command = a.getActionCommand();
+			if (command.equals("Hit")) {
+				giveCard(humanPlayer);
+				boolean busted = humanPlayer.getHand().isBusted();
+				setTurnContinue(!busted);
+			} else if (command.equals("Stand")) {
+				setTurnContinue(false);
+			}
 		}
 
 
-		@Override
-		public void actionPerformed(ActionEvent arg0) {
+		private void giveCard(PlayerPanel humanPlayer2) {
 			// TODO Auto-generated method stub
 			
 		}
@@ -89,4 +129,65 @@ import com.blackjack.bean.Hand;
 			// TODO Auto-generated method stub
 			
 		}
+		/**
+		 * @return the cardImages
+		 */
+		public Image getCardImages() {
+			return cardImages;
+		}
+
+		/**
+		 * @param cardImages the cardImages to set
+		 */
+		public void setCardImages(Image cardImages) {
+			this.cardImages = cardImages;
+		}
+		/**
+		 * @return the humanPlayer
+		 */
+		public PlayerPanel getHumanPlayer() {
+			return humanPlayer;
+		}
+
+		/**
+		 * @param humanPlayer the humanPlayer to set
+		 */
+		public void setHumanPlayer(PlayerPanel humanPlayer) {
+			this.humanPlayer = humanPlayer;
+		}
+		
+		/**
+		 * @param turnContinue the turnContinue to set
+		 */
+			
+			public void setTurnContinue(boolean turnContinue) {
+				this.turnContinue = turnContinue;
+			}
+
+
+		public boolean isTurnContinue() {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+
+		public void doDealerTurn() {
+			// TODO Auto-generated method stub
+			
+		}
+
+
+		public void doPayOuts() {
+			// TODO Auto-generated method stub
+			
+		}
+
+
+		public void reset() {
+			// TODO Auto-generated method stub
+			
+		}
+			
+		
+
 }
