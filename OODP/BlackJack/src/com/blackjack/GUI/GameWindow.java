@@ -8,6 +8,7 @@ import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.net.URL;
+import java.util.ArrayList;
 
 import javax.swing.BorderFactory;
 import javax.swing.JFrame;
@@ -29,13 +30,13 @@ import com.blackjack.bean.Hand;
 		
 		private static final long serialVersionUID = 1L;
 		
-		//private DealerPanel dealer;
+		private DealerPanel dealer;
 		
 		private PlayerPanel humanPlayer;
 		
 		//private ChoicePanel playerChoices;
 		
-		//private Deck deck;
+		private Deck deck;
 		
 		private boolean turnContinue;
 		private Image cardImages;	
@@ -103,6 +104,27 @@ import com.blackjack.bean.Hand;
 				setTurnContinue(!busted);
 			} else if (command.equals("Stand")) {
 				setTurnContinue(false);
+			}
+		}
+		/**
+		 * Deals cards to the player
+		 * 
+		 * @param player
+		 *            The player to deal cards to
+		 */
+		private void dealCards(PlayerPanel player) {
+			Card c1 = deck.draw();
+			Card c2 = deck.draw();
+			player.startHand(c1, c2);
+		}
+		/**
+		 * Collects cards from the dealer
+		 */
+		
+		private void collectDealerCards() {
+			ArrayList<Card> collectedCards = dealer.clearHand();
+			for (Card card : collectedCards) {
+				this.deck.addToBottom(card);
 			}
 		}
 
