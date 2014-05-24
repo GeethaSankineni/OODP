@@ -34,7 +34,7 @@ import com.blackjack.bean.Hand;
 		
 		private PlayerPanel humanPlayer;
 		
-		//private ChoicePanel playerChoices;
+		private ChoicePanel playerChoices;
 		
 		private Deck deck;
 		
@@ -69,7 +69,38 @@ import com.blackjack.bean.Hand;
 			
 			
 		}
+		/**
+		 * Gives or takes money from player
+		 * 
+		 * @param player
+		 */
+		private void payOut(PlayerPanel player) {
 
+			Hand playerHand = player.getHand();
+			Hand dealerHand = this.dealer.getHand();
+			
+			// Black Jack Check
+			boolean playerHasBJ = playerHand.isBlackJack();
+			boolean dealerHasBJ = dealerHand.isBlackJack();
+			
+			if (playerHasBJ && dealerHasBJ) {
+				player.addWinnings(player.getCurrentBet());
+				if (player.isHuman())
+					JOptionPane.showMessageDialog(this,"We both have Blackjack, a push. Your $"+ player.getCurrentBet() + "bet is returned.");
+				return;
+			} else if (playerHasBJ && !dealerHasBJ) {
+				player.addWinnings(player.getCurrentBet() * 2);
+				if (player.isHuman())
+					JOptionPane.showMessageDialog(this, "Not bad, a Blackjack. You win $" + player.getCurrentBet()* 2 + ".");
+				return;
+			} else if (!playerHasBJ && dealerHasBJ) {
+				player.addWinnings(0);
+				if (player.isHuman())
+					JOptionPane.showMessageDialog(this,"I have Blackjack. Sorry, you lose.");
+
+				return;
+			}
+		}
 			
 		
          private void loadImages() {
@@ -127,12 +158,29 @@ import com.blackjack.bean.Hand;
 				this.deck.addToBottom(card);
 			}
 		}
-
-
-		private void giveCard(PlayerPanel humanPlayer2) {
-			// TODO Auto-generated method stub
-			
+		/**
+		 * Collects cards from the player
+		 * 
+		 * @param player
+		 *            The player to collect cards from
+		 */
+		@SuppressWarnings("unused")
+		private void collectCards(PlayerPanel player) {
+			ArrayList<Card> collectedCards = player.clearHand();
+			for (Card card : collectedCards) {
+				this.deck.addToBottom(card);
+			}
 		}
+		/**
+		 * Gives a card to the player
+		 * 
+		 * @param player
+		 */
+		private void giveCard(PlayerPanel player) {
+			player.getHand().addCard(deck.draw());
+		}
+
+		
 
 
 		public void askBets() {
