@@ -39,7 +39,9 @@ import com.blackjack.bean.Hand;
 		private Deck deck;
 		
 		private boolean turnContinue;
-		private Image cardImages;	
+		private Image cardImages;
+
+
 
 		/**
 		 * Opens window containing Blackjack game.
@@ -101,8 +103,10 @@ import com.blackjack.bean.Hand;
 				return;
 			}
 		}
-			
+
 		
+
+	
          private void loadImages() {
 		
 				ClassLoader cl = GameWindow.class.getClassLoader();
