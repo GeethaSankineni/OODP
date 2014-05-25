@@ -3,12 +3,14 @@ package com.blackjack.GUI;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.Graphics;
 import java.awt.Image;
 import java.util.ArrayList;
 
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import com.blackjack.bean.Card;
@@ -105,7 +107,67 @@ import com.blackjack.bean.Hand;
 	public void startHand(Card c1, Card c2) {
 		hand = new Hand(c1, c2);
 	}
-	
+	/**
+	 * Gets the betting amount from player. If it is human, it pops up a dialog
+	 * asking for an amount. For computers, it is calculated internally. The bet
+	 * is automatically subtracted from the players total money.
+	 * 
+	 * @param count
+	 *            Current card count
+	 * @return amount to bet
+	 */
+	public int askBet(int count) {
+		int betAmount = 0;
+		if (isHuman) {
+			betAmount = askHumanBet("Minimum Bet is $" + minBet + ". How much will are you betting?", minBet, money);
+		}
+
+		money = money - betAmount;
+		bet = betAmount;
+		updateText();
+		return betAmount;
+	}
+
+	/**
+	 * Pops up an input dialog asking a question for amount to bet. Non-numbers
+	 * and clicking on cancel/X result in getting "kicked out", but on merely
+	 * illegal number values a new dialog asks for a correct input.
+	 * 
+	 * @param msg
+	 *            question to ask to player
+	 * @param min
+	 *            minimum player can bet
+	 * @param max
+	 *            maximum player can bet
+	 * @return
+	 */
+	private int askHumanBet(String msg, int min, int max) {
+		int hBet = 0;
+		String sBet = JOptionPane.showInputDialog(msg);
+		try {
+			hBet = Integer.valueOf(sBet);
+			while (hBet < 0 || hBet < min || hBet > max) {
+				String errReply;
+				if (hBet < 0) {
+					errReply = "Please provide +ve amount";
+				} else if (hBet < min) {
+					errReply = "You need to give minimum $" + min + " as bet amount";
+				} else {
+					errReply = "Given bet mount is not avaible in u r balance";
+				}
+				sBet = JOptionPane.showInputDialog(errReply);
+				hBet = Integer.valueOf(sBet);
+			}
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(this,
+					"You have not select correct otpion, So will be out of the game.");
+			System.exit(0);
+		}
+		return hBet;
+	}
+
+
+
 	/**
 	 * Clears the player's hand and returns it in an ArrayList	 * 
 	 * @return ArrayList containing the cleared hand
@@ -156,6 +218,47 @@ import com.blackjack.bean.Hand;
 	 * 
 	 * @return Boolean representing whether the player is a human
 	 */
+	/**
+	 * Paints a card image onto (x,y) of the container. A face down card will be
+	 * drawn accordingly.
+	 * 
+	 * @param g
+	 *            the graphics context
+	 * @param card
+	 *            the card to be printed
+	 * @param x
+	 *            the x-position of the printed card in this container
+	 * @param y
+	 *            the y-position of the printed card in this container
+	 */
+	private void drawCard(Graphics g, Card card, int x, int y) {
+		int cx; // top-left x of cardsImage
+		int cy; // top-left y of cardsImage
+		boolean faceUp = true;
+		if (card.isFaceUp() != faceUp) {
+			cx = 2 * 79;
+			cy = 4 * 123;
+		} else {
+			cx = (card.getFace() - 1) * 79;
+			switch (card.getSuit()) {
+			case Card.DIAMONDS:
+				cy = 123;
+				break;
+			case Card.CLUBS:
+				cy = 0;
+				break;
+			case Card.HEARTS:
+				cy = 2 * 123;
+				break;
+			default:
+				cy = 3 * 123;
+				break; // Spades
+			}
+		}
+		g.drawImage(cardImgs, x, y, x + 79, y + 123, cx, cy, cx + 79, cy + 123,
+				this);
+	}
+
 	public boolean isHuman() {
 		return isHuman;
 	}
