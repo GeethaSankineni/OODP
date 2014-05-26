@@ -263,4 +263,14 @@ import com.blackjack.bean.Hand;
 		return isHuman;
 	}
 
+
+	/**
+	 * Gets the amount of money player has left.
+	 * 
+	 * @return player's remaining cash
+	 */
+	public int getMoney() {
+		return money;
+	}
+
 }
