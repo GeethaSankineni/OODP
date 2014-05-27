@@ -224,6 +224,15 @@ import com.blackjack.bean.Hand;
 			}
 		}
 		/**
+		 * Gives a card to the player
+		 * 
+		 * @param player
+		 */
+		private void giveCard(PlayerPanel player) {
+			player.getHand().addCard(deck.draw());
+		}
+
+		/**
 		 * Responds to button presses from the ChoicePanel.
 		 * 
 		 * @param a
@@ -246,14 +255,7 @@ import com.blackjack.bean.Hand;
 		
 		
 		
-		/**
-		 * Gives a card to the player
-		 * 
-		 * @param player
-		 */
-		private void giveCard(PlayerPanel player) {
-			player.getHand().addCard(deck.draw());
-		}
+		
 		/**
 		 * Enables and disables some buttons
 		 * 
@@ -288,6 +290,23 @@ import com.blackjack.bean.Hand;
 		
 		
 		
+		/**
+		 * Deals out cards to players and dealer
+		 */
+		public void deal() {
+			dealerCards(dealer);
+			dealCards(humanPlayer);
+
+		}
+		/**
+		 * Does the dealer's turn
+		 */
+		public void doDealerTurn() {
+			this.dealer.flipSecond();
+			while (this.dealer.getHand().getBestValue() < 17) {
+				this.dealer.getHand().addCard(deck.draw());
+			}
+		}
 
 		/**
 		 * @return the cardImages
@@ -331,11 +350,7 @@ import com.blackjack.bean.Hand;
 		}
 
 
-		public void doDealerTurn() {
-			// TODO Auto-generated method stub
-			
-		}
-
+		
 
 		public void doPayOuts() {
 			// TODO Auto-generated method stub
