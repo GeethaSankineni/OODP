@@ -241,26 +241,41 @@ import com.blackjack.bean.Hand;
 		private void giveCard(PlayerPanel player) {
 			player.getHand().addCard(deck.draw());
 		}
+		/**
+		 * Enables and disables some buttons
+		 * 
+		 * @param hitState
+		 *            - The hit button
+		 * @param standState
+		 *            - The stand button
+		 */
+		public void setButtonState(boolean hitState, boolean standState) {
+			if (hitState)
+				playerChoices.enableHit();
+			else
+				playerChoices.disableHit();
+			if (standState)
+				playerChoices.enableStand();
+			else
+				playerChoices.disableStand();
+		}
 
 		
 
 
+
+		/**
+		 * Asks for bets from players
+		 */
 		public void askBets() {
-			// TODO Auto-generated method stub
-			
+			humanPlayer.askBet(deck.getCount());
+
 		}
 
+		
+		
+		
 
-		public void deal() {
-			// TODO Auto-generated method stub
-			
-		}
-
-
-		public void setButtonState(boolean b, boolean c) {
-			// TODO Auto-generated method stub
-			
-		}
 		/**
 		 * @return the cardImages
 		 */
