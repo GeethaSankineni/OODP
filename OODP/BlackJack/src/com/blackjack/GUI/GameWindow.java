@@ -309,6 +309,20 @@ import com.blackjack.bean.Hand;
 		}
 
 		/**
+		 * Gives out the money
+		 */
+		public void doPayOuts() {
+			payOut(this.humanPlayer);
+		}
+		/**
+		 * Clears the cards on the table
+		 */
+		public void reset() {
+			collectCards(humanPlayer);
+			collectDealerCards();
+			setTurnContinue(true);
+		}	
+		/**
 		 * @return the cardImages
 		 */
 		public Image getCardImages() {
@@ -352,17 +366,8 @@ import com.blackjack.bean.Hand;
 
 		
 
-		public void doPayOuts() {
-			// TODO Auto-generated method stub
-			
-		}
+	
 
-
-		public void reset() {
-			// TODO Auto-generated method stub
-			
-		}
-			
-		
+	
 
 }
