@@ -69,7 +69,27 @@ import com.blackjack.bean.Hand;
 		 */
 		private void initComponents() {
 			
+			this.deck = new Deck();
+			setTurnContinue(true);
+
+			setLayout(new BorderLayout(10, 10));
+
+			this.dealer = new DealerPanel(BlackJackUtil.MIN_BET, this.cardImages);
+			add(this.dealer, BorderLayout.LINE_START);
+
+			JPanel players = new JPanel();
+			players.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.DARK_GRAY), "PLAYERS"));
 			
+			this.humanPlayer = new PlayerPanel(BlackJackUtil.PLAYER_NAME, true, BlackJackUtil.START_MONEY,BlackJackUtil.MIN_BET, this.cardImages);
+
+			players.add(this.humanPlayer);
+			players.setOpaque(false);
+			
+			add(players, BorderLayout.CENTER);
+			
+			playerChoices = new ChoicePanel();
+			playerChoices.addListener(this);
+			add(playerChoices, BorderLayout.PAGE_END);
 		}
 		/**
 		 * Gives or takes money from player
