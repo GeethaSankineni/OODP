@@ -164,7 +164,9 @@ import com.blackjack.bean.Hand;
 						return;
 					}
 				}
-	
+		/**
+		 * Load card images file.
+		 */
          private void loadImages() {
 		
 				ClassLoader cl = GameWindow.class.getClassLoader();
@@ -177,8 +179,50 @@ import com.blackjack.bean.Hand;
 					System.exit(1);
 				}
 			}
-
-		
+         /**
+ 		 * Deals cards to the dealer
+ 		 * 
+ 		 * @param dealer
+ 		 *            The dealer to deal cards to
+ 		 */
+ 		private void dealerCards(DealerPanel dealer) {
+ 			Card c1 = deck.draw();
+ 			Card c2 = deck.draw();
+ 			this.dealer.startHand(c1, c2);
+ 			this.dealer.flipSecond();
+ 		}
+         /**
+ 		 * Deals cards to the player
+ 		 * 
+ 		 * @param player
+ 		 *            The player to deal cards to
+ 		 */
+ 		private void dealCards(PlayerPanel player) {
+ 			Card c1 = deck.draw();
+ 			Card c2 = deck.draw();
+ 			player.startHand(c1, c2);
+ 		}
+ 		/**
+		 * Collects cards from the dealer
+		 */
+		private void collectDealerCards() {
+			ArrayList<Card> collectedCards = dealer.clearHand();
+			for (Card card : collectedCards) {
+				this.deck.addToBottom(card);
+			}
+		}
+		/**
+		 * Collects cards from the player
+		 * 
+		 * @param player
+		 *            The player to collect cards from
+		 */
+		private void collectCards(PlayerPanel player) {
+			ArrayList<Card> collectedCards = player.clearHand();
+			for (Card card : collectedCards) {
+				this.deck.addToBottom(card);
+			}
+		}
 		/**
 		 * Responds to button presses from the ChoicePanel.
 		 * 
@@ -199,40 +243,9 @@ import com.blackjack.bean.Hand;
 				setTurnContinue(false);
 			}
 		}
-		/**
-		 * Deals cards to the player
-		 * 
-		 * @param player
-		 *            The player to deal cards to
-		 */
-		private void dealCards(PlayerPanel player) {
-			Card c1 = deck.draw();
-			Card c2 = deck.draw();
-			player.startHand(c1, c2);
-		}
-		/**
-		 * Collects cards from the dealer
-		 */
 		
-		private void collectDealerCards() {
-			ArrayList<Card> collectedCards = dealer.clearHand();
-			for (Card card : collectedCards) {
-				this.deck.addToBottom(card);
-			}
-		}
-		/**
-		 * Collects cards from the player
-		 * 
-		 * @param player
-		 *            The player to collect cards from
-		 */
-		@SuppressWarnings("unused")
-		private void collectCards(PlayerPanel player) {
-			ArrayList<Card> collectedCards = player.clearHand();
-			for (Card card : collectedCards) {
-				this.deck.addToBottom(card);
-			}
-		}
+		
+		
 		/**
 		 * Gives a card to the player
 		 * 
