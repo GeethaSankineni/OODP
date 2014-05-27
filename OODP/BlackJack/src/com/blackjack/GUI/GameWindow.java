@@ -122,10 +122,48 @@ import com.blackjack.bean.Hand;
 
 				return;
 			}
-		}
-
+			// Busted Check
+						boolean playerHasBusted = playerHand.isBusted();
+						boolean dealerHasBusted = dealerHand.isBusted();
+						
+						if (playerHasBusted) {
+							player.addWinnings(0);
+							if (player.isHuman())
+								JOptionPane.showMessageDialog(this,"You have busted. Sorry, you lose.");
+							return;
+						} else if (dealerHasBusted) {
+							player.addWinnings(player.getCurrentBet() * 2);
+							if (player.isHuman())
+								JOptionPane.showMessageDialog(this,"Damn, I've busted. You get $" + player.getCurrentBet()* 2 + ".");
+							return;
+						}
 		
 
+		
+		// Normal Score Check
+					int playerValue = playerHand.getBestValue();
+					int dealerValue = dealerHand.getBestValue();
+					
+					if (playerValue > dealerValue) {
+						player.addWinnings(player.getCurrentBet() * 2);
+						if (player.isHuman())
+							JOptionPane.showMessageDialog(this,
+									" Dealer Score = " + dealerValue + "; Your Score = "+ playerValue + ";\n you've won. " + "Take your $"+ player.getCurrentBet() * 2 + ".");
+						return;
+					} else if (playerValue == dealerValue) {
+						player.addWinnings(player.getCurrentBet());
+						if (player.isHuman())
+							JOptionPane.showMessageDialog(this, " Dealer Score = "+ dealerValue + "; Your Score = " + playerValue+ ";\n A push. Your $" 
+															+ player.getCurrentBet()+ "bet is returned.");
+						return;
+					} else {
+						player.addWinnings(0);
+						if (player.isHuman())
+							JOptionPane.showMessageDialog(this, " Dealer Score = "+ dealerValue + "; Your Score = " + playerValue
+															+ ";\n Dealer hand wins. Better luck next time around.");
+						return;
+					}
+				}
 	
          private void loadImages() {
 		
