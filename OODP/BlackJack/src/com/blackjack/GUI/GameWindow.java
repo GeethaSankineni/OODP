@@ -1,33 +1,31 @@
 package com.blackjack.GUI;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Image;
-import java.awt.Toolkit;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.net.URL;
-import java.util.ArrayList;
-
-import javax.swing.BorderFactory;
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-
-import com.blackjack.bean.Card;
-import com.blackjack.bean.Deck;
-import com.blackjack.bean.Hand;
 
 
-/**
- * Contains GUI components.
- * 
- */
+	import java.awt.BorderLayout;
+	import java.awt.Color;
+	import java.awt.Image;
+	import java.awt.Toolkit;
+	import java.awt.event.ActionEvent;
+	import java.awt.event.ActionListener;
+	import java.net.URL;
+	import java.util.ArrayList;
+
+	import javax.swing.BorderFactory;
+	import javax.swing.JFrame;
+	import javax.swing.JOptionPane;
+	import javax.swing.JPanel;
+
+	import com.blackjack.bean.Card;
+	import com.blackjack.bean.Deck;
+	import com.blackjack.bean.Hand;
+
+	/**
+	 * Contains GUI components.
+	 * 
+	 */
 	public class GameWindow extends JFrame implements ActionListener {
 
-		
-		
 		private static final long serialVersionUID = 1L;
 		
 		private DealerPanel dealer;
@@ -39,9 +37,7 @@ import com.blackjack.bean.Hand;
 		private Deck deck;
 		
 		private boolean turnContinue;
-		private Image cardImages;
-
-
+		private Image cardImages;	
 
 		/**
 		 * Opens window containing Blackjack game.
@@ -62,7 +58,8 @@ import com.blackjack.bean.Hand;
 			setDefaultCloseOperation(EXIT_ON_CLOSE);
 			setVisible(true);
 		}
-	
+
+
 
 		/**
 		 * Adds components to the frame.
@@ -91,6 +88,7 @@ import com.blackjack.bean.Hand;
 			playerChoices.addListener(this);
 			add(playerChoices, BorderLayout.PAGE_END);
 		}
+
 		/**
 		 * Gives or takes money from player
 		 * 
@@ -113,7 +111,7 @@ import com.blackjack.bean.Hand;
 			} else if (playerHasBJ && !dealerHasBJ) {
 				player.addWinnings(player.getCurrentBet() * 2);
 				if (player.isHuman())
-					JOptionPane.showMessageDialog(this, "Not bad, a Blackjack. You win $" + player.getCurrentBet()* 2 + ".");
+					JOptionPane.showMessageDialog(this, "Not bad, a Blackjack. You win $" + player.getCurrentBet() * 2 + ".");
 				return;
 			} else if (!playerHasBJ && dealerHasBJ) {
 				player.addWinnings(0);
@@ -122,87 +120,89 @@ import com.blackjack.bean.Hand;
 
 				return;
 			}
-			// Busted Check
-						boolean playerHasBusted = playerHand.isBusted();
-						boolean dealerHasBusted = dealerHand.isBusted();
-						
-						if (playerHasBusted) {
-							player.addWinnings(0);
-							if (player.isHuman())
-								JOptionPane.showMessageDialog(this,"You have busted. Sorry, you lose.");
-							return;
-						} else if (dealerHasBusted) {
-							player.addWinnings(player.getCurrentBet() * 2);
-							if (player.isHuman())
-								JOptionPane.showMessageDialog(this,"Damn, I've busted. You get $" + player.getCurrentBet()* 2 + ".");
-							return;
-						}
-		
 
-		
-		// Normal Score Check
-					int playerValue = playerHand.getBestValue();
-					int dealerValue = dealerHand.getBestValue();
-					
-					if (playerValue > dealerValue) {
-						player.addWinnings(player.getCurrentBet() * 2);
-						if (player.isHuman())
-							JOptionPane.showMessageDialog(this,
-									" Dealer Score = " + dealerValue + "; Your Score = "+ playerValue + ";\n you've won. " + "Take your $"+ player.getCurrentBet() * 2 + ".");
-						return;
-					} else if (playerValue == dealerValue) {
-						player.addWinnings(player.getCurrentBet());
-						if (player.isHuman())
-							JOptionPane.showMessageDialog(this, " Dealer Score = "+ dealerValue + "; Your Score = " + playerValue+ ";\n A push. Your $" 
-															+ player.getCurrentBet()+ "bet is returned.");
-						return;
-					} else {
-						player.addWinnings(0);
-						if (player.isHuman())
-							JOptionPane.showMessageDialog(this, " Dealer Score = "+ dealerValue + "; Your Score = " + playerValue
-															+ ";\n Dealer hand wins. Better luck next time around.");
-						return;
-					}
-				}
+			// Busted Check
+			boolean playerHasBusted = playerHand.isBusted();
+			boolean dealerHasBusted = dealerHand.isBusted();
+			
+			if (playerHasBusted) {
+				player.addWinnings(0);
+				if (player.isHuman())
+					JOptionPane.showMessageDialog(this,"You have busted. Sorry, you lose.");
+				return;
+			} else if (dealerHasBusted) {
+				player.addWinnings(player.getCurrentBet() * 2);
+				if (player.isHuman())
+					JOptionPane.showMessageDialog(this,"Damn, I've busted. You get $" + player.getCurrentBet()* 2 + ".");
+				return;
+			}
+
+			// Normal Score Check
+			int playerValue = playerHand.getBestValue();
+			int dealerValue = dealerHand.getBestValue();
+			
+			if (playerValue > dealerValue) {
+				player.addWinnings(player.getCurrentBet() * 2);
+				if (player.isHuman())
+					JOptionPane.showMessageDialog(this,
+							" Dealer Score = " + dealerValue + "; Your Score = "+ playerValue + ";\n you've won. " + "Take your $"+ player.getCurrentBet() * 2 + ".");
+				return;
+			} else if (playerValue == dealerValue) {
+				player.addWinnings(player.getCurrentBet());
+				if (player.isHuman())
+					JOptionPane.showMessageDialog(this, " Dealer Score = "+ dealerValue + "; Your Score = " + playerValue+ ";\n A push. Your $" 
+													+ player.getCurrentBet()+ "bet is returned.");
+				return;
+			} else {
+				player.addWinnings(0);
+				if (player.isHuman())
+					JOptionPane.showMessageDialog(this, " Dealer Score = "+ dealerValue + "; Your Score = " + playerValue
+													+ ";\n Dealer hand wins. Better luck next time around.");
+				return;
+			}
+		}
+
 		/**
 		 * Load card images file.
 		 */
-         private void loadImages() {
-		
-				ClassLoader cl = GameWindow.class.getClassLoader();
-				URL imageURL = cl.getResource("cards.png");
-				if (imageURL != null){
-					this.cardImages = Toolkit.getDefaultToolkit().createImage(imageURL);
-				} else {
-					String errorMsg = "Card image file loading failed.";
-					JOptionPane.showMessageDialog(this, errorMsg, "Error",JOptionPane.ERROR_MESSAGE);
-					System.exit(1);
-				}
+		private void loadImages() {
+			ClassLoader cl = GameWindow.class.getClassLoader();
+			URL imageURL = cl.getResource("cards.png");
+			if (imageURL != null){
+				this.cardImages = Toolkit.getDefaultToolkit().createImage(imageURL);
+			} else {
+				String errorMsg = "Card image file loading failed.";
+				JOptionPane.showMessageDialog(this, errorMsg, "Error",JOptionPane.ERROR_MESSAGE);
+				System.exit(1);
 			}
-         /**
- 		 * Deals cards to the dealer
- 		 * 
- 		 * @param dealer
- 		 *            The dealer to deal cards to
- 		 */
- 		private void dealerCards(DealerPanel dealer) {
- 			Card c1 = deck.draw();
- 			Card c2 = deck.draw();
- 			this.dealer.startHand(c1, c2);
- 			this.dealer.flipSecond();
- 		}
-         /**
- 		 * Deals cards to the player
- 		 * 
- 		 * @param player
- 		 *            The player to deal cards to
- 		 */
- 		private void dealCards(PlayerPanel player) {
- 			Card c1 = deck.draw();
- 			Card c2 = deck.draw();
- 			player.startHand(c1, c2);
- 		}
- 		/**
+		}
+
+		/**
+		 * Deals cards to the dealer
+		 * 
+		 * @param dealer
+		 *            The dealer to deal cards to
+		 */
+		private void dealerCards(DealerPanel dealer) {
+			Card c1 = deck.draw();
+			Card c2 = deck.draw();
+			this.dealer.startHand(c1, c2);
+			this.dealer.flipSecond();
+		}
+
+		/**
+		 * Deals cards to the player
+		 * 
+		 * @param player
+		 *            The player to deal cards to
+		 */
+		private void dealCards(PlayerPanel player) {
+			Card c1 = deck.draw();
+			Card c2 = deck.draw();
+			player.startHand(c1, c2);
+		}
+
+		/**
 		 * Collects cards from the dealer
 		 */
 		private void collectDealerCards() {
@@ -211,6 +211,7 @@ import com.blackjack.bean.Hand;
 				this.deck.addToBottom(card);
 			}
 		}
+
 		/**
 		 * Collects cards from the player
 		 * 
@@ -223,6 +224,7 @@ import com.blackjack.bean.Hand;
 				this.deck.addToBottom(card);
 			}
 		}
+
 		/**
 		 * Gives a card to the player
 		 * 
@@ -232,30 +234,6 @@ import com.blackjack.bean.Hand;
 			player.getHand().addCard(deck.draw());
 		}
 
-		/**
-		 * Responds to button presses from the ChoicePanel.
-		 * 
-		 * @param a
-		 *            The event that will be responded to
-		 */
-
-		@Override
-		public void actionPerformed(ActionEvent a) {
-		
-			// TODO Auto-generated method stub
-			String command = a.getActionCommand();
-			if (command.equals("Hit")) {
-				giveCard(humanPlayer);
-				boolean busted = humanPlayer.getHand().isBusted();
-				setTurnContinue(!busted);
-			} else if (command.equals("Stand")) {
-				setTurnContinue(false);
-			}
-		}
-		
-		
-		
-		
 		/**
 		 * Enables and disables some buttons
 		 * 
@@ -275,10 +253,6 @@ import com.blackjack.bean.Hand;
 				playerChoices.disableStand();
 		}
 
-		
-
-
-
 		/**
 		 * Asks for bets from players
 		 */
@@ -287,10 +261,8 @@ import com.blackjack.bean.Hand;
 
 		}
 
-		
-		
-		
 		/**
+		 * 
 		 * Deals out cards to players and dealer
 		 */
 		public void deal() {
@@ -298,6 +270,7 @@ import com.blackjack.bean.Hand;
 			dealCards(humanPlayer);
 
 		}
+
 		/**
 		 * Does the dealer's turn
 		 */
@@ -314,6 +287,7 @@ import com.blackjack.bean.Hand;
 		public void doPayOuts() {
 			payOut(this.humanPlayer);
 		}
+
 		/**
 		 * Clears the cards on the table
 		 */
@@ -322,6 +296,40 @@ import com.blackjack.bean.Hand;
 			collectDealerCards();
 			setTurnContinue(true);
 		}	
+		
+		/**
+		 * Responds to button presses from the ChoicePanel.
+		 * 
+		 * @param a
+		 *            The event that will be responded to
+		 */
+		@Override
+		public void actionPerformed(ActionEvent a) {
+			
+			String command = a.getActionCommand();
+			if (command.equals("Hit")) {
+				giveCard(humanPlayer);
+				boolean busted = humanPlayer.getHand().isBusted();
+				setTurnContinue(!busted);
+			} else if (command.equals("Stand")) {
+				setTurnContinue(false);
+			}
+		}
+
+		/**
+		 * @return the turnContinue
+		 */
+		public boolean isTurnContinue() {
+			return turnContinue;
+		}
+
+		/**
+		 * @param turnContinue the turnContinue to set
+		 */
+		public void setTurnContinue(boolean turnContinue) {
+			this.turnContinue = turnContinue;
+		}
+		
 		/**
 		 * @return the cardImages
 		 */
@@ -335,6 +343,7 @@ import com.blackjack.bean.Hand;
 		public void setCardImages(Image cardImages) {
 			this.cardImages = cardImages;
 		}
+
 		/**
 		 * @return the humanPlayer
 		 */
@@ -349,25 +358,7 @@ import com.blackjack.bean.Hand;
 			this.humanPlayer = humanPlayer;
 		}
 		
-		/**
-		 * @param turnContinue the turnContinue to set
-		 */
-			
-			public void setTurnContinue(boolean turnContinue) {
-				this.turnContinue = turnContinue;
-			}
-
-
-		public boolean isTurnContinue() {
-			// TODO Auto-generated method stub
-			return false;
-		}
-
-
 		
 
-	
+	}
 
-	
-
-}
