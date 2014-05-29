@@ -1,20 +1,28 @@
 package com.blackjack.bean;
 
-
 import java.util.ArrayList;
 import java.util.List;
-
-
 import java.util.Random;
 
 import com.blackjack.GUI.BlackJackUtil;
 
+/**
+ * Template for creating a deck of cards for a blackjack game. Static variables
+ * can be changed to alter the number of cards/suits in a deck /Cards in the
+ * first hand of the game/Faces in the deck. Methods will shuffle the deck, draw
+ * a card, and add a card to the bottom of the deck.
+ * 
+ */
 public class Deck {
-private List<Card> deck;
+
+	private List<Card> deck;
 	
-private int numCardsRemaining;
-private int count;
-public Deck() {
+	private int numCardsRemaining;
+	
+	private int count;
+
+		
+	public Deck() {
 		
 		this.deck = new ArrayList<Card>();
 		for (int i = 0; i < BlackJackUtil.NUM_DECKS; i++) {
@@ -26,11 +34,10 @@ public Deck() {
 		}
 		shuffle();
 	}
+
 	/**
 	 * Shuffles the deck
 	 */
-
-
 	public void shuffle() {
 		ArrayList<Card> tempDeck = new ArrayList<Card>();
 		Random random = new Random();
@@ -48,6 +55,7 @@ public Deck() {
 		count = 0;
 		numCardsRemaining = BlackJackUtil.NUM_DECKS * BlackJackUtil.CARDS_IN_DECK;
 	}
+
 	/**
 	 * Draws a card from the deck
 	 * 
@@ -66,6 +74,7 @@ public Deck() {
 
 		return toDraw;
 	}
+
 	/**
 	 * Gets the current card count
 	 * 
@@ -87,5 +96,4 @@ public Deck() {
 			shuffle();
 		}
 	}
-
 }

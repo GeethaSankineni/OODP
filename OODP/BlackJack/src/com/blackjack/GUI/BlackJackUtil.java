@@ -1,6 +1,8 @@
 package com.blackjack.GUI;
 
-public class BlackJackUtil {
+public abstract class BlackJackUtil {
+	
+	
 	public static final int NUM_DECKS =2;
 	
 	public final static int FACES_IN_DECK = 13;
@@ -8,7 +10,6 @@ public class BlackJackUtil {
 	public final static int SUITS_IN_DECK = 4;
 	
 	public final static int CARDS_IN_DECK = 52;
-	
 	
 	
 	/**

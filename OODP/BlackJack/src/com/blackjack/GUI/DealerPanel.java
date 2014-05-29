@@ -1,15 +1,12 @@
 package com.blackjack.GUI;
 
-import java.awt.Graphics;
-import java.awt.Image;
-import java.util.ArrayList;
 import java.awt.*;
+import java.util.ArrayList;
 
 import javax.swing.*;
 
 import com.blackjack.bean.Card;
 import com.blackjack.bean.Hand;
-
 
 /**
  * A container that represents the Dealer. It has a hand (dealer's hand), the
@@ -47,6 +44,7 @@ public class DealerPanel extends JPanel {
 		minBetDisp.setFont(new Font(Font.SERIF, Font.BOLD, 18));
 		add(minBetDisp);
 	}
+
 	/**
 	 * Creates a hand with Card c1 and Card c2
 	 * 
@@ -57,7 +55,6 @@ public class DealerPanel extends JPanel {
 		 this.hand = new Hand(c1, c2);
 	}
 	
-
 	/**
 	 * Clears the hand and returns it in an ArrayList
 	 * 
@@ -74,6 +71,7 @@ public class DealerPanel extends JPanel {
 		hand.get(1).flip();
 		repaint();
 	}
+	
 	/**
 	 * Paints the cards stacked top-down in addition to the rest of the
 	 * components. The cards are arranged so the user can still see all of the
@@ -88,6 +86,7 @@ public class DealerPanel extends JPanel {
 			drawCard(g, hand.get(i), 10, 80 + 33 * i);
 		}
 	}
+
 	/**
 	 * Paints a card image onto (x,y) of the container. A face down card will be
 	 * drawn accordingly.

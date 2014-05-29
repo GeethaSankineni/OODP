@@ -1,9 +1,14 @@
 package com.blackjack.bean;
 
+/**
+ * A class that can be used to create poker cards in a standard 52 card deck.
+ * Cards can be one of 13 faces, one of four suits, and one of two colours.
+ * Methods will get the names, faces, values, suits, or colours of the cards and
+ * can flip the card face up or face down
+ * 
+ */
+
 public class Card {
-	/*
-	 * Declare Constants
-	 * */
 	
 	public static final int ACE = 1;
 	
@@ -50,29 +55,38 @@ public class Card {
 	 */
 	private int face;
 	
-	private boolean isFaceUp;
-	
-/*
- * Create Card with 3 attributes
- * */
-	
-	
+	private boolean isFaceUp; // Tells whether the card is face (i.e, hidden or showing).
+
+	/**
+	 * Create a card with suit cSuit, face cFace, and facing direction faceDir
+	 * 
+	 * @param cSuit
+	 *            Suit of the Card
+	 * @param cFace
+	 *            Face of the Card
+	 * @param faceDir
+	 *            Face up (true) or Face down (false)
+	 */
 	public Card(int suit, int face, boolean faceDir) {
 		this.suit = suit;
 		this.face = face;
 		this.isFaceUp = faceDir;
 	}
 
-	/*
-	 * Create Card with 2 attributes
-	 * */
-			
+	/**
+	 * Create a card with suit cSuit, face cFace
+	 * 
+	 * @param cSuit
+	 *            Suit of the Card
+	 * @param cFace
+	 *            Face of the Card
+	 */
 	public Card(int suit, int face) {
 		this.suit = suit;
 		this.face = face;
 		this.isFaceUp = true;
 	}
-	
+
 	/**
 	 * Gets the color of the card
 	 * 
@@ -93,6 +107,7 @@ public class Card {
 	public int getFace() {
 		return face;
 	}
+
 	/**
 	 * Gets the value of the Card Uses the face of the Card to calculate the
 	 * value Ace is 1, 2-9 are itself, 10 and higher are 10
@@ -119,8 +134,8 @@ public class Card {
 		} else {
 			return high;
 		}
-		
 	}
+
 	/**
 	 * Gets the lowest value of the card
 	 * 
@@ -179,6 +194,7 @@ public class Card {
 			return "Error: No Case";
 		}
 	}
+
 	/**
 	 * Gets the face name in a string
 	 * 

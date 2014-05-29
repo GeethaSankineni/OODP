@@ -3,17 +3,27 @@ package com.blackjack.bean;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * Class for creating hands in a game of blackjack. Static variables can be
+ * changed for different blackjack rules. Methods will get the best (highest)
+ * value of the hand, the number of cards in the hand, whether the hand has
+ * busted or is blackjack. They can also add cards to the hand and clear the
+ * hand. A Hand is initialized with INITIAL_HAND_SIZE number of cards, and cards
+ * cannot be removed by the user.
+ * 
+ */
 public class Hand {
-	private List<Card> playerHand;
+	
+	private List<Card> playerHand; 
 	
 	/**
 	 * The number of cards in the first hand
 	 */
+	public final static int INITIAL_HAND_SIZE = 2;	
 	
-	 public final static int INITIAL_HAND_SIZE = 2;
 	
-	 /** 
+
+	/**
 	 * Creates a hand with Card c1 and Card c2
 	 * 
 	 * @param card1 - The first Card to be added to the Hand
@@ -24,6 +34,8 @@ public class Hand {
 		this.playerHand.add(card1);
 		this.playerHand.add(card2);
 	}
+	
+	
 	/**
 	 * Gets the best(highest) value of the hand
 	 * 
@@ -47,6 +59,7 @@ public class Hand {
 		}
 		return totalValue;
 	}
+
 	/**
 	 * Tells whether the hand has busted
 	 * 
@@ -55,6 +68,7 @@ public class Hand {
 	public boolean isBusted() {
 		return getBestValue() > 21;
 	}
+
 	/**
 	 * Hand is Blackjack if and only if it has 2 cards: an Ace and a 10/Jack/Queen/King
 	 * 
@@ -94,6 +108,7 @@ public class Hand {
 	public void addCard(Card card) {
 		this.playerHand.add(card);
 	}
+
 	/**
 	 * Gets the card at index position of the hand
 	 * 
@@ -114,7 +129,4 @@ public class Hand {
 		return this.playerHand.size();
 	}
 
-	}
-	
-	
-
+}
