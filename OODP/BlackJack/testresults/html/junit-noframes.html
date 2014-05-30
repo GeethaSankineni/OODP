@@ -1,0 +1,1692 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns:string="xalan://java.lang.String" xmlns:lxslt="http://xml.apache.org/xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Unit Test Results.</title>
+<style type="text/css">
+      body {
+        font:normal 68% verdana,arial,helvetica;
+        color:#000000;
+      }
+      table tr td, table tr th {
+          font-size: 68%;
+      }
+      table.details tr th{
+        font-weight: bold;
+        text-align:left;
+        background:#a6caf0;
+      }
+      table.details tr td{
+        background:#eeeee0;
+      }
+
+      p {
+        line-height:1.5em;
+        margin-top:0.5em; margin-bottom:1.0em;
+      }
+      h1 {
+        margin: 0px 0px 5px; font: 165% verdana,arial,helvetica
+      }
+      h2 {
+        margin-top: 1em; margin-bottom: 0.5em; font: bold 125% verdana,arial,helvetica
+      }
+      h3 {
+        margin-bottom: 0.5em; font: bold 115% verdana,arial,helvetica
+      }
+      h4 {
+        margin-bottom: 0.5em; font: bold 100% verdana,arial,helvetica
+      }
+      h5 {
+        margin-bottom: 0.5em; font: bold 100% verdana,arial,helvetica
+      }
+      h6 {
+        margin-bottom: 0.5em; font: bold 100% verdana,arial,helvetica
+      }
+      .Error {
+        font-weight:bold; color:red;
+      }
+      .Failure {
+        font-weight:bold; color:purple;
+      }
+      .Properties {
+        text-align:right;
+      }
+      </style>
+<script type="text/javascript" language="JavaScript">
+        var TestCases = new Array();
+        var cur;
+        
+    cur = TestCases['com.blackjack.Junit.BlackJackTest'] = new Array();
+    
+        cur['ant.core.lib'] = '/usr/share/ant/lib/ant.jar';
+    
+        cur['ant.file'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/build.xml';
+    
+        cur['ant.file.BlackJack'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/build.xml';
+    
+        cur['ant.file.type'] = 'file';
+    
+        cur['ant.file.type.BlackJack'] = 'file';
+    
+        cur['ant.home'] = '/usr/share/ant';
+    
+        cur['ant.java.version'] = '1.7';
+    
+        cur['ant.library.dir'] = '/usr/share/ant/lib';
+    
+        cur['ant.project.default-target'] = 'build';
+    
+        cur['ant.project.invoked-targets'] = 'test';
+    
+        cur['ant.project.name'] = 'BlackJack';
+    
+        cur['ant.version'] = 'Apache Ant(TM) version 1.9.3 compiled on April 8 2014';
+    
+        cur['awt.toolkit'] = 'sun.awt.X11.XToolkit';
+    
+        cur['basedir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack';
+    
+        cur['build.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/bin';
+    
+        cur['debuglevel'] = 'source,lines,vars';
+    
+        cur['ECLIPSE_HOME'] = '../../../../../../usr/lib/eclipse';
+    
+        cur['env._'] = '/usr/bin/ant';
+    
+        cur['env.CLUTTER_IM_MODULE'] = 'xim';
+    
+        cur['env.COLORTERM'] = 'gnome-terminal';
+    
+        cur['env.COMPIZ_BIN_PATH'] = '/usr/bin/';
+    
+        cur['env.COMPIZ_CONFIG_PROFILE'] = 'ubuntu';
+    
+        cur['env.DBUS_SESSION_BUS_ADDRESS'] = 'unix:abstract=/tmp/dbus-90JJD86EmR';
+    
+        cur['env.DEFAULTS_PATH'] = '/usr/share/gconf/ubuntu.default.path';
+    
+        cur['env.DESKTOP_SESSION'] = 'ubuntu';
+    
+        cur['env.DISPLAY'] = ':0';
+    
+        cur['env.GDM_LANG'] = 'en_US';
+    
+        cur['env.GDMSESSION'] = 'ubuntu';
+    
+        cur['env.GNOME_DESKTOP_SESSION_ID'] = 'this-is-deprecated';
+    
+        cur['env.GNOME_KEYRING_CONTROL'] = '/run/user/1000/keyring-xcOvoO';
+    
+        cur['env.GNOME_KEYRING_PID'] = '2382';
+    
+        cur['env.GPG_AGENT_INFO'] = '/run/user/1000/keyring-xcOvoO/gpg:0:1';
+    
+        cur['env.GTK_IM_MODULE'] = 'ibus';
+    
+        cur['env.GTK_MODULES'] = 'overlay-scrollbar:unity-gtk-module';
+    
+        cur['env.HOME'] = '/home/nikhil';
+    
+        cur['env.IM_CONFIG_PHASE'] = '1';
+    
+        cur['env.INSTANCE'] = '';
+    
+        cur['env.JOB'] = 'dbus';
+    
+        cur['env.LANG'] = 'en_US.UTF-8';
+    
+        cur['env.LANGUAGE'] = 'en_US';
+    
+        cur['env.LESSCLOSE'] = '/usr/bin/lesspipe %s %s';
+    
+        cur['env.LESSOPEN'] = '| /usr/bin/lesspipe %s';
+    
+        cur['env.LOGNAME'] = 'nikhil';
+    
+        cur['env.LS_COLORS'] = 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:';
+    
+        cur['env.MANDATORY_PATH'] = '/usr/share/gconf/ubuntu.mandatory.path';
+    
+        cur['env.OLDPWD'] = '/home/nikhil/pichigeetha/OODP/OODP';
+    
+        cur['env.PATH'] = '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games';
+    
+        cur['env.PWD'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack';
+    
+        cur['env.QT_QPA_PLATFORMTHEME'] = 'appmenu-qt5';
+    
+        cur['env.QT4_IM_MODULE'] = 'xim';
+    
+        cur['env.SELINUX_INIT'] = 'YES';
+    
+        cur['env.SESSION'] = 'ubuntu';
+    
+        cur['env.SESSION_MANAGER'] = 'local/ubuntu:@/tmp/.ICE-unix/2513,unix/ubuntu:/tmp/.ICE-unix/2513';
+    
+        cur['env.SESSIONTYPE'] = 'gnome-session';
+    
+        cur['env.SHELL'] = '/bin/bash';
+    
+        cur['env.SHLVL'] = '1';
+    
+        cur['env.SSH_AGENT_LAUNCHER'] = 'upstart';
+    
+        cur['env.SSH_AGENT_PID'] = '2457';
+    
+        cur['env.SSH_AUTH_SOCK'] = '/run/user/1000/keyring-xcOvoO/ssh';
+    
+        cur['env.TERM'] = 'xterm';
+    
+        cur['env.TEXTDOMAIN'] = 'im-config';
+    
+        cur['env.TEXTDOMAINDIR'] = '/usr/share/locale/';
+    
+        cur['env.UBUNTU_MENUPROXY'] = '1';
+    
+        cur['env.UPSTART_SESSION'] = 'unix:abstract=/com/ubuntu/upstart-session/1000/2386';
+    
+        cur['env.USER'] = 'nikhil';
+    
+        cur['env.VTE_VERSION'] = '3409';
+    
+        cur['env.WINDOWID'] = '67108875';
+    
+        cur['env.XAUTHORITY'] = '/home/nikhil/.Xauthority';
+    
+        cur['env.XDG_CONFIG_DIRS'] = '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg';
+    
+        cur['env.XDG_CURRENT_DESKTOP'] = 'Unity';
+    
+        cur['env.XDG_DATA_DIRS'] = '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/';
+    
+        cur['env.XDG_GREETER_DATA_DIR'] = '/var/lib/lightdm-data/nikhil';
+    
+        cur['env.XDG_MENU_PREFIX'] = 'gnome-';
+    
+        cur['env.XDG_RUNTIME_DIR'] = '/run/user/1000';
+    
+        cur['env.XDG_SEAT'] = 'seat0';
+    
+        cur['env.XDG_SEAT_PATH'] = '/org/freedesktop/DisplayManager/Seat0';
+    
+        cur['env.XDG_SESSION_ID'] = 'c2';
+    
+        cur['env.XDG_SESSION_PATH'] = '/org/freedesktop/DisplayManager/Session0';
+    
+        cur['env.XDG_VTNR'] = '7';
+    
+        cur['env.XMODIFIERS'] = '@im=ibus';
+    
+        cur['file.encoding'] = 'UTF-8';
+    
+        cur['file.encoding.pkg'] = 'sun.io';
+    
+        cur['file.separator'] = '/';
+    
+        cur['java.awt.graphicsenv'] = 'sun.awt.X11GraphicsEnvironment';
+    
+        cur['java.awt.printerjob'] = 'sun.print.PSPrinterJob';
+    
+        cur['java.class.path'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/lib/junit-4.10.jar:/home/nikhil/pichigeetha/OODP/OODP/BlackJack/bin:/usr/share/ant/lib/junit.jar:/usr/share/java/ant-launcher-1.9.3.jar:/usr/share/ant/lib/ant.jar:/usr/share/ant/lib/ant-junit.jar:/usr/share/ant/lib/ant-junit4.jar';
+    
+        cur['java.class.version'] = '51.0';
+    
+        cur['java.endorsed.dirs'] = '/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/endorsed';
+    
+        cur['java.ext.dirs'] = '/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext';
+    
+        cur['java.home'] = '/usr/lib/jvm/java-7-openjdk-amd64/jre';
+    
+        cur['java.io.tmpdir'] = '/tmp';
+    
+        cur['java.library.path'] = '/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib';
+    
+        cur['java.runtime.name'] = 'OpenJDK Runtime Environment';
+    
+        cur['java.runtime.version'] = '1.7.0_51-b31';
+    
+        cur['java.specification.name'] = 'Java Platform API Specification';
+    
+        cur['java.specification.vendor'] = 'Oracle Corporation';
+    
+        cur['java.specification.version'] = '1.7';
+    
+        cur['java.vendor'] = 'Oracle Corporation';
+    
+        cur['java.vendor.url'] = 'http://java.oracle.com/';
+    
+        cur['java.vendor.url.bug'] = 'http://bugreport.sun.com/bugreport/';
+    
+        cur['java.version'] = '1.7.0_51';
+    
+        cur['java.vm.info'] = 'mixed mode';
+    
+        cur['java.vm.name'] = 'OpenJDK 64-Bit Server VM';
+    
+        cur['java.vm.specification.name'] = 'Java Virtual Machine Specification';
+    
+        cur['java.vm.specification.vendor'] = 'Oracle Corporation';
+    
+        cur['java.vm.specification.version'] = '1.7';
+    
+        cur['java.vm.vendor'] = 'Oracle Corporation';
+    
+        cur['java.vm.version'] = '24.51-b03';
+    
+        cur['junit.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/unittest';
+    
+        cur['lib.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/lib';
+    
+        cur['line.separator'] = '\n';
+    
+        cur['os.arch'] = 'amd64';
+    
+        cur['os.name'] = 'Linux';
+    
+        cur['os.version'] = '3.13.0-24-generic';
+    
+        cur['path.separator'] = ':';
+    
+        cur['source'] = '1.7';
+    
+        cur['src.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/src';
+    
+        cur['sun.arch.data.model'] = '64';
+    
+        cur['sun.boot.class.path'] = '/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/netx.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/plugin.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rhino.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/classes';
+    
+        cur['sun.boot.library.path'] = '/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64';
+    
+        cur['sun.cpu.endian'] = 'little';
+    
+        cur['sun.cpu.isalist'] = '';
+    
+        cur['sun.desktop'] = 'gnome';
+    
+        cur['sun.io.unicode.encoding'] = 'UnicodeLittle';
+    
+        cur['sun.java.command'] = 'org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.blackjack.Junit.BlackJackTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/nikhil/pichigeetha/OODP/OODP/BlackJack/testresults/TEST-com.blackjack.Junit.BlackJackTest.xml crashfile=/home/nikhil/pichigeetha/OODP/OODP/BlackJack/junitvmwatcher3566443562228541126.properties propsfile=/home/nikhil/pichigeetha/OODP/OODP/BlackJack/junit9180688118814511277.properties';
+    
+        cur['sun.java.launcher'] = 'SUN_STANDARD';
+    
+        cur['sun.jnu.encoding'] = 'UTF-8';
+    
+        cur['sun.management.compiler'] = 'HotSpot 64-Bit Tiered Compilers';
+    
+        cur['sun.os.patch.level'] = 'unknown';
+    
+        cur['target'] = '1.7';
+    
+        cur['test.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/src';
+    
+        cur['test.results.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/testresults';
+    
+        cur['user.country'] = 'US';
+    
+        cur['user.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack';
+    
+        cur['user.home'] = '/home/nikhil';
+    
+        cur['user.language'] = 'en';
+    
+        cur['user.name'] = 'nikhil';
+    
+        cur['user.timezone'] = '';
+    
+    cur = TestCases['com.blackjack.Junit.CardJunitTest'] = new Array();
+    
+        cur['ant.core.lib'] = '/usr/share/ant/lib/ant.jar';
+    
+        cur['ant.file'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/build.xml';
+    
+        cur['ant.file.BlackJack'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/build.xml';
+    
+        cur['ant.file.type'] = 'file';
+    
+        cur['ant.file.type.BlackJack'] = 'file';
+    
+        cur['ant.home'] = '/usr/share/ant';
+    
+        cur['ant.java.version'] = '1.7';
+    
+        cur['ant.library.dir'] = '/usr/share/ant/lib';
+    
+        cur['ant.project.default-target'] = 'build';
+    
+        cur['ant.project.invoked-targets'] = 'test';
+    
+        cur['ant.project.name'] = 'BlackJack';
+    
+        cur['ant.version'] = 'Apache Ant(TM) version 1.9.3 compiled on April 8 2014';
+    
+        cur['awt.toolkit'] = 'sun.awt.X11.XToolkit';
+    
+        cur['basedir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack';
+    
+        cur['build.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/bin';
+    
+        cur['debuglevel'] = 'source,lines,vars';
+    
+        cur['ECLIPSE_HOME'] = '../../../../../../usr/lib/eclipse';
+    
+        cur['env._'] = '/usr/bin/ant';
+    
+        cur['env.CLUTTER_IM_MODULE'] = 'xim';
+    
+        cur['env.COLORTERM'] = 'gnome-terminal';
+    
+        cur['env.COMPIZ_BIN_PATH'] = '/usr/bin/';
+    
+        cur['env.COMPIZ_CONFIG_PROFILE'] = 'ubuntu';
+    
+        cur['env.DBUS_SESSION_BUS_ADDRESS'] = 'unix:abstract=/tmp/dbus-90JJD86EmR';
+    
+        cur['env.DEFAULTS_PATH'] = '/usr/share/gconf/ubuntu.default.path';
+    
+        cur['env.DESKTOP_SESSION'] = 'ubuntu';
+    
+        cur['env.DISPLAY'] = ':0';
+    
+        cur['env.GDM_LANG'] = 'en_US';
+    
+        cur['env.GDMSESSION'] = 'ubuntu';
+    
+        cur['env.GNOME_DESKTOP_SESSION_ID'] = 'this-is-deprecated';
+    
+        cur['env.GNOME_KEYRING_CONTROL'] = '/run/user/1000/keyring-xcOvoO';
+    
+        cur['env.GNOME_KEYRING_PID'] = '2382';
+    
+        cur['env.GPG_AGENT_INFO'] = '/run/user/1000/keyring-xcOvoO/gpg:0:1';
+    
+        cur['env.GTK_IM_MODULE'] = 'ibus';
+    
+        cur['env.GTK_MODULES'] = 'overlay-scrollbar:unity-gtk-module';
+    
+        cur['env.HOME'] = '/home/nikhil';
+    
+        cur['env.IM_CONFIG_PHASE'] = '1';
+    
+        cur['env.INSTANCE'] = '';
+    
+        cur['env.JOB'] = 'dbus';
+    
+        cur['env.LANG'] = 'en_US.UTF-8';
+    
+        cur['env.LANGUAGE'] = 'en_US';
+    
+        cur['env.LESSCLOSE'] = '/usr/bin/lesspipe %s %s';
+    
+        cur['env.LESSOPEN'] = '| /usr/bin/lesspipe %s';
+    
+        cur['env.LOGNAME'] = 'nikhil';
+    
+        cur['env.LS_COLORS'] = 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:';
+    
+        cur['env.MANDATORY_PATH'] = '/usr/share/gconf/ubuntu.mandatory.path';
+    
+        cur['env.OLDPWD'] = '/home/nikhil/pichigeetha/OODP/OODP';
+    
+        cur['env.PATH'] = '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games';
+    
+        cur['env.PWD'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack';
+    
+        cur['env.QT_QPA_PLATFORMTHEME'] = 'appmenu-qt5';
+    
+        cur['env.QT4_IM_MODULE'] = 'xim';
+    
+        cur['env.SELINUX_INIT'] = 'YES';
+    
+        cur['env.SESSION'] = 'ubuntu';
+    
+        cur['env.SESSION_MANAGER'] = 'local/ubuntu:@/tmp/.ICE-unix/2513,unix/ubuntu:/tmp/.ICE-unix/2513';
+    
+        cur['env.SESSIONTYPE'] = 'gnome-session';
+    
+        cur['env.SHELL'] = '/bin/bash';
+    
+        cur['env.SHLVL'] = '1';
+    
+        cur['env.SSH_AGENT_LAUNCHER'] = 'upstart';
+    
+        cur['env.SSH_AGENT_PID'] = '2457';
+    
+        cur['env.SSH_AUTH_SOCK'] = '/run/user/1000/keyring-xcOvoO/ssh';
+    
+        cur['env.TERM'] = 'xterm';
+    
+        cur['env.TEXTDOMAIN'] = 'im-config';
+    
+        cur['env.TEXTDOMAINDIR'] = '/usr/share/locale/';
+    
+        cur['env.UBUNTU_MENUPROXY'] = '1';
+    
+        cur['env.UPSTART_SESSION'] = 'unix:abstract=/com/ubuntu/upstart-session/1000/2386';
+    
+        cur['env.USER'] = 'nikhil';
+    
+        cur['env.VTE_VERSION'] = '3409';
+    
+        cur['env.WINDOWID'] = '67108875';
+    
+        cur['env.XAUTHORITY'] = '/home/nikhil/.Xauthority';
+    
+        cur['env.XDG_CONFIG_DIRS'] = '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg';
+    
+        cur['env.XDG_CURRENT_DESKTOP'] = 'Unity';
+    
+        cur['env.XDG_DATA_DIRS'] = '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/';
+    
+        cur['env.XDG_GREETER_DATA_DIR'] = '/var/lib/lightdm-data/nikhil';
+    
+        cur['env.XDG_MENU_PREFIX'] = 'gnome-';
+    
+        cur['env.XDG_RUNTIME_DIR'] = '/run/user/1000';
+    
+        cur['env.XDG_SEAT'] = 'seat0';
+    
+        cur['env.XDG_SEAT_PATH'] = '/org/freedesktop/DisplayManager/Seat0';
+    
+        cur['env.XDG_SESSION_ID'] = 'c2';
+    
+        cur['env.XDG_SESSION_PATH'] = '/org/freedesktop/DisplayManager/Session0';
+    
+        cur['env.XDG_VTNR'] = '7';
+    
+        cur['env.XMODIFIERS'] = '@im=ibus';
+    
+        cur['file.encoding'] = 'UTF-8';
+    
+        cur['file.encoding.pkg'] = 'sun.io';
+    
+        cur['file.separator'] = '/';
+    
+        cur['java.awt.graphicsenv'] = 'sun.awt.X11GraphicsEnvironment';
+    
+        cur['java.awt.printerjob'] = 'sun.print.PSPrinterJob';
+    
+        cur['java.class.path'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/lib/junit-4.10.jar:/home/nikhil/pichigeetha/OODP/OODP/BlackJack/bin:/usr/share/ant/lib/junit.jar:/usr/share/java/ant-launcher-1.9.3.jar:/usr/share/ant/lib/ant.jar:/usr/share/ant/lib/ant-junit.jar:/usr/share/ant/lib/ant-junit4.jar';
+    
+        cur['java.class.version'] = '51.0';
+    
+        cur['java.endorsed.dirs'] = '/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/endorsed';
+    
+        cur['java.ext.dirs'] = '/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext';
+    
+        cur['java.home'] = '/usr/lib/jvm/java-7-openjdk-amd64/jre';
+    
+        cur['java.io.tmpdir'] = '/tmp';
+    
+        cur['java.library.path'] = '/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib';
+    
+        cur['java.runtime.name'] = 'OpenJDK Runtime Environment';
+    
+        cur['java.runtime.version'] = '1.7.0_51-b31';
+    
+        cur['java.specification.name'] = 'Java Platform API Specification';
+    
+        cur['java.specification.vendor'] = 'Oracle Corporation';
+    
+        cur['java.specification.version'] = '1.7';
+    
+        cur['java.vendor'] = 'Oracle Corporation';
+    
+        cur['java.vendor.url'] = 'http://java.oracle.com/';
+    
+        cur['java.vendor.url.bug'] = 'http://bugreport.sun.com/bugreport/';
+    
+        cur['java.version'] = '1.7.0_51';
+    
+        cur['java.vm.info'] = 'mixed mode';
+    
+        cur['java.vm.name'] = 'OpenJDK 64-Bit Server VM';
+    
+        cur['java.vm.specification.name'] = 'Java Virtual Machine Specification';
+    
+        cur['java.vm.specification.vendor'] = 'Oracle Corporation';
+    
+        cur['java.vm.specification.version'] = '1.7';
+    
+        cur['java.vm.vendor'] = 'Oracle Corporation';
+    
+        cur['java.vm.version'] = '24.51-b03';
+    
+        cur['junit.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/unittest';
+    
+        cur['lib.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/lib';
+    
+        cur['line.separator'] = '\n';
+    
+        cur['os.arch'] = 'amd64';
+    
+        cur['os.name'] = 'Linux';
+    
+        cur['os.version'] = '3.13.0-24-generic';
+    
+        cur['path.separator'] = ':';
+    
+        cur['source'] = '1.7';
+    
+        cur['src.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/src';
+    
+        cur['sun.arch.data.model'] = '64';
+    
+        cur['sun.boot.class.path'] = '/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/netx.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/plugin.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rhino.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/classes';
+    
+        cur['sun.boot.library.path'] = '/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64';
+    
+        cur['sun.cpu.endian'] = 'little';
+    
+        cur['sun.cpu.isalist'] = '';
+    
+        cur['sun.desktop'] = 'gnome';
+    
+        cur['sun.io.unicode.encoding'] = 'UnicodeLittle';
+    
+        cur['sun.java.command'] = 'org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.blackjack.Junit.CardJunitTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/nikhil/pichigeetha/OODP/OODP/BlackJack/testresults/TEST-com.blackjack.Junit.CardJunitTest.xml crashfile=/home/nikhil/pichigeetha/OODP/OODP/BlackJack/junitvmwatcher3515338918540611309.properties propsfile=/home/nikhil/pichigeetha/OODP/OODP/BlackJack/junit2295059239760832460.properties';
+    
+        cur['sun.java.launcher'] = 'SUN_STANDARD';
+    
+        cur['sun.jnu.encoding'] = 'UTF-8';
+    
+        cur['sun.management.compiler'] = 'HotSpot 64-Bit Tiered Compilers';
+    
+        cur['sun.os.patch.level'] = 'unknown';
+    
+        cur['target'] = '1.7';
+    
+        cur['test.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/src';
+    
+        cur['test.results.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/testresults';
+    
+        cur['user.country'] = 'US';
+    
+        cur['user.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack';
+    
+        cur['user.home'] = '/home/nikhil';
+    
+        cur['user.language'] = 'en';
+    
+        cur['user.name'] = 'nikhil';
+    
+        cur['user.timezone'] = '';
+    
+    cur = TestCases['com.blackjack.Junit.DealerPanelJUnitTest'] = new Array();
+    
+        cur['ant.core.lib'] = '/usr/share/ant/lib/ant.jar';
+    
+        cur['ant.file'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/build.xml';
+    
+        cur['ant.file.BlackJack'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/build.xml';
+    
+        cur['ant.file.type'] = 'file';
+    
+        cur['ant.file.type.BlackJack'] = 'file';
+    
+        cur['ant.home'] = '/usr/share/ant';
+    
+        cur['ant.java.version'] = '1.7';
+    
+        cur['ant.library.dir'] = '/usr/share/ant/lib';
+    
+        cur['ant.project.default-target'] = 'build';
+    
+        cur['ant.project.invoked-targets'] = 'test';
+    
+        cur['ant.project.name'] = 'BlackJack';
+    
+        cur['ant.version'] = 'Apache Ant(TM) version 1.9.3 compiled on April 8 2014';
+    
+        cur['awt.toolkit'] = 'sun.awt.X11.XToolkit';
+    
+        cur['basedir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack';
+    
+        cur['build.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/bin';
+    
+        cur['debuglevel'] = 'source,lines,vars';
+    
+        cur['ECLIPSE_HOME'] = '../../../../../../usr/lib/eclipse';
+    
+        cur['env._'] = '/usr/bin/ant';
+    
+        cur['env.CLUTTER_IM_MODULE'] = 'xim';
+    
+        cur['env.COLORTERM'] = 'gnome-terminal';
+    
+        cur['env.COMPIZ_BIN_PATH'] = '/usr/bin/';
+    
+        cur['env.COMPIZ_CONFIG_PROFILE'] = 'ubuntu';
+    
+        cur['env.DBUS_SESSION_BUS_ADDRESS'] = 'unix:abstract=/tmp/dbus-90JJD86EmR';
+    
+        cur['env.DEFAULTS_PATH'] = '/usr/share/gconf/ubuntu.default.path';
+    
+        cur['env.DESKTOP_SESSION'] = 'ubuntu';
+    
+        cur['env.DISPLAY'] = ':0';
+    
+        cur['env.GDM_LANG'] = 'en_US';
+    
+        cur['env.GDMSESSION'] = 'ubuntu';
+    
+        cur['env.GNOME_DESKTOP_SESSION_ID'] = 'this-is-deprecated';
+    
+        cur['env.GNOME_KEYRING_CONTROL'] = '/run/user/1000/keyring-xcOvoO';
+    
+        cur['env.GNOME_KEYRING_PID'] = '2382';
+    
+        cur['env.GPG_AGENT_INFO'] = '/run/user/1000/keyring-xcOvoO/gpg:0:1';
+    
+        cur['env.GTK_IM_MODULE'] = 'ibus';
+    
+        cur['env.GTK_MODULES'] = 'overlay-scrollbar:unity-gtk-module';
+    
+        cur['env.HOME'] = '/home/nikhil';
+    
+        cur['env.IM_CONFIG_PHASE'] = '1';
+    
+        cur['env.INSTANCE'] = '';
+    
+        cur['env.JOB'] = 'dbus';
+    
+        cur['env.LANG'] = 'en_US.UTF-8';
+    
+        cur['env.LANGUAGE'] = 'en_US';
+    
+        cur['env.LESSCLOSE'] = '/usr/bin/lesspipe %s %s';
+    
+        cur['env.LESSOPEN'] = '| /usr/bin/lesspipe %s';
+    
+        cur['env.LOGNAME'] = 'nikhil';
+    
+        cur['env.LS_COLORS'] = 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:';
+    
+        cur['env.MANDATORY_PATH'] = '/usr/share/gconf/ubuntu.mandatory.path';
+    
+        cur['env.OLDPWD'] = '/home/nikhil/pichigeetha/OODP/OODP';
+    
+        cur['env.PATH'] = '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games';
+    
+        cur['env.PWD'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack';
+    
+        cur['env.QT_QPA_PLATFORMTHEME'] = 'appmenu-qt5';
+    
+        cur['env.QT4_IM_MODULE'] = 'xim';
+    
+        cur['env.SELINUX_INIT'] = 'YES';
+    
+        cur['env.SESSION'] = 'ubuntu';
+    
+        cur['env.SESSION_MANAGER'] = 'local/ubuntu:@/tmp/.ICE-unix/2513,unix/ubuntu:/tmp/.ICE-unix/2513';
+    
+        cur['env.SESSIONTYPE'] = 'gnome-session';
+    
+        cur['env.SHELL'] = '/bin/bash';
+    
+        cur['env.SHLVL'] = '1';
+    
+        cur['env.SSH_AGENT_LAUNCHER'] = 'upstart';
+    
+        cur['env.SSH_AGENT_PID'] = '2457';
+    
+        cur['env.SSH_AUTH_SOCK'] = '/run/user/1000/keyring-xcOvoO/ssh';
+    
+        cur['env.TERM'] = 'xterm';
+    
+        cur['env.TEXTDOMAIN'] = 'im-config';
+    
+        cur['env.TEXTDOMAINDIR'] = '/usr/share/locale/';
+    
+        cur['env.UBUNTU_MENUPROXY'] = '1';
+    
+        cur['env.UPSTART_SESSION'] = 'unix:abstract=/com/ubuntu/upstart-session/1000/2386';
+    
+        cur['env.USER'] = 'nikhil';
+    
+        cur['env.VTE_VERSION'] = '3409';
+    
+        cur['env.WINDOWID'] = '67108875';
+    
+        cur['env.XAUTHORITY'] = '/home/nikhil/.Xauthority';
+    
+        cur['env.XDG_CONFIG_DIRS'] = '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg';
+    
+        cur['env.XDG_CURRENT_DESKTOP'] = 'Unity';
+    
+        cur['env.XDG_DATA_DIRS'] = '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/';
+    
+        cur['env.XDG_GREETER_DATA_DIR'] = '/var/lib/lightdm-data/nikhil';
+    
+        cur['env.XDG_MENU_PREFIX'] = 'gnome-';
+    
+        cur['env.XDG_RUNTIME_DIR'] = '/run/user/1000';
+    
+        cur['env.XDG_SEAT'] = 'seat0';
+    
+        cur['env.XDG_SEAT_PATH'] = '/org/freedesktop/DisplayManager/Seat0';
+    
+        cur['env.XDG_SESSION_ID'] = 'c2';
+    
+        cur['env.XDG_SESSION_PATH'] = '/org/freedesktop/DisplayManager/Session0';
+    
+        cur['env.XDG_VTNR'] = '7';
+    
+        cur['env.XMODIFIERS'] = '@im=ibus';
+    
+        cur['file.encoding'] = 'UTF-8';
+    
+        cur['file.encoding.pkg'] = 'sun.io';
+    
+        cur['file.separator'] = '/';
+    
+        cur['java.awt.graphicsenv'] = 'sun.awt.X11GraphicsEnvironment';
+    
+        cur['java.awt.printerjob'] = 'sun.print.PSPrinterJob';
+    
+        cur['java.class.path'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/lib/junit-4.10.jar:/home/nikhil/pichigeetha/OODP/OODP/BlackJack/bin:/usr/share/ant/lib/junit.jar:/usr/share/java/ant-launcher-1.9.3.jar:/usr/share/ant/lib/ant.jar:/usr/share/ant/lib/ant-junit.jar:/usr/share/ant/lib/ant-junit4.jar';
+    
+        cur['java.class.version'] = '51.0';
+    
+        cur['java.endorsed.dirs'] = '/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/endorsed';
+    
+        cur['java.ext.dirs'] = '/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext';
+    
+        cur['java.home'] = '/usr/lib/jvm/java-7-openjdk-amd64/jre';
+    
+        cur['java.io.tmpdir'] = '/tmp';
+    
+        cur['java.library.path'] = '/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib';
+    
+        cur['java.runtime.name'] = 'OpenJDK Runtime Environment';
+    
+        cur['java.runtime.version'] = '1.7.0_51-b31';
+    
+        cur['java.specification.name'] = 'Java Platform API Specification';
+    
+        cur['java.specification.vendor'] = 'Oracle Corporation';
+    
+        cur['java.specification.version'] = '1.7';
+    
+        cur['java.vendor'] = 'Oracle Corporation';
+    
+        cur['java.vendor.url'] = 'http://java.oracle.com/';
+    
+        cur['java.vendor.url.bug'] = 'http://bugreport.sun.com/bugreport/';
+    
+        cur['java.version'] = '1.7.0_51';
+    
+        cur['java.vm.info'] = 'mixed mode';
+    
+        cur['java.vm.name'] = 'OpenJDK 64-Bit Server VM';
+    
+        cur['java.vm.specification.name'] = 'Java Virtual Machine Specification';
+    
+        cur['java.vm.specification.vendor'] = 'Oracle Corporation';
+    
+        cur['java.vm.specification.version'] = '1.7';
+    
+        cur['java.vm.vendor'] = 'Oracle Corporation';
+    
+        cur['java.vm.version'] = '24.51-b03';
+    
+        cur['junit.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/unittest';
+    
+        cur['lib.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/lib';
+    
+        cur['line.separator'] = '\n';
+    
+        cur['os.arch'] = 'amd64';
+    
+        cur['os.name'] = 'Linux';
+    
+        cur['os.version'] = '3.13.0-24-generic';
+    
+        cur['path.separator'] = ':';
+    
+        cur['source'] = '1.7';
+    
+        cur['src.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/src';
+    
+        cur['sun.arch.data.model'] = '64';
+    
+        cur['sun.boot.class.path'] = '/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/netx.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/plugin.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rhino.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/classes';
+    
+        cur['sun.boot.library.path'] = '/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64';
+    
+        cur['sun.cpu.endian'] = 'little';
+    
+        cur['sun.cpu.isalist'] = '';
+    
+        cur['sun.desktop'] = 'gnome';
+    
+        cur['sun.io.unicode.encoding'] = 'UnicodeLittle';
+    
+        cur['sun.java.command'] = 'org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.blackjack.Junit.DealerPanelJUnitTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/nikhil/pichigeetha/OODP/OODP/BlackJack/testresults/TEST-com.blackjack.Junit.DealerPanelJUnitTest.xml crashfile=/home/nikhil/pichigeetha/OODP/OODP/BlackJack/junitvmwatcher9174706070537007689.properties propsfile=/home/nikhil/pichigeetha/OODP/OODP/BlackJack/junit7007726375524920259.properties';
+    
+        cur['sun.java.launcher'] = 'SUN_STANDARD';
+    
+        cur['sun.jnu.encoding'] = 'UTF-8';
+    
+        cur['sun.management.compiler'] = 'HotSpot 64-Bit Tiered Compilers';
+    
+        cur['sun.os.patch.level'] = 'unknown';
+    
+        cur['target'] = '1.7';
+    
+        cur['test.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/src';
+    
+        cur['test.results.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/testresults';
+    
+        cur['user.country'] = 'US';
+    
+        cur['user.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack';
+    
+        cur['user.home'] = '/home/nikhil';
+    
+        cur['user.language'] = 'en';
+    
+        cur['user.name'] = 'nikhil';
+    
+        cur['user.timezone'] = '';
+    
+    cur = TestCases['com.blackjack.Junit.HandJunitTest'] = new Array();
+    
+        cur['ant.core.lib'] = '/usr/share/ant/lib/ant.jar';
+    
+        cur['ant.file'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/build.xml';
+    
+        cur['ant.file.BlackJack'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/build.xml';
+    
+        cur['ant.file.type'] = 'file';
+    
+        cur['ant.file.type.BlackJack'] = 'file';
+    
+        cur['ant.home'] = '/usr/share/ant';
+    
+        cur['ant.java.version'] = '1.7';
+    
+        cur['ant.library.dir'] = '/usr/share/ant/lib';
+    
+        cur['ant.project.default-target'] = 'build';
+    
+        cur['ant.project.invoked-targets'] = 'test';
+    
+        cur['ant.project.name'] = 'BlackJack';
+    
+        cur['ant.version'] = 'Apache Ant(TM) version 1.9.3 compiled on April 8 2014';
+    
+        cur['awt.toolkit'] = 'sun.awt.X11.XToolkit';
+    
+        cur['basedir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack';
+    
+        cur['build.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/bin';
+    
+        cur['debuglevel'] = 'source,lines,vars';
+    
+        cur['ECLIPSE_HOME'] = '../../../../../../usr/lib/eclipse';
+    
+        cur['env._'] = '/usr/bin/ant';
+    
+        cur['env.CLUTTER_IM_MODULE'] = 'xim';
+    
+        cur['env.COLORTERM'] = 'gnome-terminal';
+    
+        cur['env.COMPIZ_BIN_PATH'] = '/usr/bin/';
+    
+        cur['env.COMPIZ_CONFIG_PROFILE'] = 'ubuntu';
+    
+        cur['env.DBUS_SESSION_BUS_ADDRESS'] = 'unix:abstract=/tmp/dbus-90JJD86EmR';
+    
+        cur['env.DEFAULTS_PATH'] = '/usr/share/gconf/ubuntu.default.path';
+    
+        cur['env.DESKTOP_SESSION'] = 'ubuntu';
+    
+        cur['env.DISPLAY'] = ':0';
+    
+        cur['env.GDM_LANG'] = 'en_US';
+    
+        cur['env.GDMSESSION'] = 'ubuntu';
+    
+        cur['env.GNOME_DESKTOP_SESSION_ID'] = 'this-is-deprecated';
+    
+        cur['env.GNOME_KEYRING_CONTROL'] = '/run/user/1000/keyring-xcOvoO';
+    
+        cur['env.GNOME_KEYRING_PID'] = '2382';
+    
+        cur['env.GPG_AGENT_INFO'] = '/run/user/1000/keyring-xcOvoO/gpg:0:1';
+    
+        cur['env.GTK_IM_MODULE'] = 'ibus';
+    
+        cur['env.GTK_MODULES'] = 'overlay-scrollbar:unity-gtk-module';
+    
+        cur['env.HOME'] = '/home/nikhil';
+    
+        cur['env.IM_CONFIG_PHASE'] = '1';
+    
+        cur['env.INSTANCE'] = '';
+    
+        cur['env.JOB'] = 'dbus';
+    
+        cur['env.LANG'] = 'en_US.UTF-8';
+    
+        cur['env.LANGUAGE'] = 'en_US';
+    
+        cur['env.LESSCLOSE'] = '/usr/bin/lesspipe %s %s';
+    
+        cur['env.LESSOPEN'] = '| /usr/bin/lesspipe %s';
+    
+        cur['env.LOGNAME'] = 'nikhil';
+    
+        cur['env.LS_COLORS'] = 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:';
+    
+        cur['env.MANDATORY_PATH'] = '/usr/share/gconf/ubuntu.mandatory.path';
+    
+        cur['env.OLDPWD'] = '/home/nikhil/pichigeetha/OODP/OODP';
+    
+        cur['env.PATH'] = '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games';
+    
+        cur['env.PWD'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack';
+    
+        cur['env.QT_QPA_PLATFORMTHEME'] = 'appmenu-qt5';
+    
+        cur['env.QT4_IM_MODULE'] = 'xim';
+    
+        cur['env.SELINUX_INIT'] = 'YES';
+    
+        cur['env.SESSION'] = 'ubuntu';
+    
+        cur['env.SESSION_MANAGER'] = 'local/ubuntu:@/tmp/.ICE-unix/2513,unix/ubuntu:/tmp/.ICE-unix/2513';
+    
+        cur['env.SESSIONTYPE'] = 'gnome-session';
+    
+        cur['env.SHELL'] = '/bin/bash';
+    
+        cur['env.SHLVL'] = '1';
+    
+        cur['env.SSH_AGENT_LAUNCHER'] = 'upstart';
+    
+        cur['env.SSH_AGENT_PID'] = '2457';
+    
+        cur['env.SSH_AUTH_SOCK'] = '/run/user/1000/keyring-xcOvoO/ssh';
+    
+        cur['env.TERM'] = 'xterm';
+    
+        cur['env.TEXTDOMAIN'] = 'im-config';
+    
+        cur['env.TEXTDOMAINDIR'] = '/usr/share/locale/';
+    
+        cur['env.UBUNTU_MENUPROXY'] = '1';
+    
+        cur['env.UPSTART_SESSION'] = 'unix:abstract=/com/ubuntu/upstart-session/1000/2386';
+    
+        cur['env.USER'] = 'nikhil';
+    
+        cur['env.VTE_VERSION'] = '3409';
+    
+        cur['env.WINDOWID'] = '67108875';
+    
+        cur['env.XAUTHORITY'] = '/home/nikhil/.Xauthority';
+    
+        cur['env.XDG_CONFIG_DIRS'] = '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg';
+    
+        cur['env.XDG_CURRENT_DESKTOP'] = 'Unity';
+    
+        cur['env.XDG_DATA_DIRS'] = '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/';
+    
+        cur['env.XDG_GREETER_DATA_DIR'] = '/var/lib/lightdm-data/nikhil';
+    
+        cur['env.XDG_MENU_PREFIX'] = 'gnome-';
+    
+        cur['env.XDG_RUNTIME_DIR'] = '/run/user/1000';
+    
+        cur['env.XDG_SEAT'] = 'seat0';
+    
+        cur['env.XDG_SEAT_PATH'] = '/org/freedesktop/DisplayManager/Seat0';
+    
+        cur['env.XDG_SESSION_ID'] = 'c2';
+    
+        cur['env.XDG_SESSION_PATH'] = '/org/freedesktop/DisplayManager/Session0';
+    
+        cur['env.XDG_VTNR'] = '7';
+    
+        cur['env.XMODIFIERS'] = '@im=ibus';
+    
+        cur['file.encoding'] = 'UTF-8';
+    
+        cur['file.encoding.pkg'] = 'sun.io';
+    
+        cur['file.separator'] = '/';
+    
+        cur['java.awt.graphicsenv'] = 'sun.awt.X11GraphicsEnvironment';
+    
+        cur['java.awt.printerjob'] = 'sun.print.PSPrinterJob';
+    
+        cur['java.class.path'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/lib/junit-4.10.jar:/home/nikhil/pichigeetha/OODP/OODP/BlackJack/bin:/usr/share/ant/lib/junit.jar:/usr/share/java/ant-launcher-1.9.3.jar:/usr/share/ant/lib/ant.jar:/usr/share/ant/lib/ant-junit.jar:/usr/share/ant/lib/ant-junit4.jar';
+    
+        cur['java.class.version'] = '51.0';
+    
+        cur['java.endorsed.dirs'] = '/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/endorsed';
+    
+        cur['java.ext.dirs'] = '/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext';
+    
+        cur['java.home'] = '/usr/lib/jvm/java-7-openjdk-amd64/jre';
+    
+        cur['java.io.tmpdir'] = '/tmp';
+    
+        cur['java.library.path'] = '/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib';
+    
+        cur['java.runtime.name'] = 'OpenJDK Runtime Environment';
+    
+        cur['java.runtime.version'] = '1.7.0_51-b31';
+    
+        cur['java.specification.name'] = 'Java Platform API Specification';
+    
+        cur['java.specification.vendor'] = 'Oracle Corporation';
+    
+        cur['java.specification.version'] = '1.7';
+    
+        cur['java.vendor'] = 'Oracle Corporation';
+    
+        cur['java.vendor.url'] = 'http://java.oracle.com/';
+    
+        cur['java.vendor.url.bug'] = 'http://bugreport.sun.com/bugreport/';
+    
+        cur['java.version'] = '1.7.0_51';
+    
+        cur['java.vm.info'] = 'mixed mode';
+    
+        cur['java.vm.name'] = 'OpenJDK 64-Bit Server VM';
+    
+        cur['java.vm.specification.name'] = 'Java Virtual Machine Specification';
+    
+        cur['java.vm.specification.vendor'] = 'Oracle Corporation';
+    
+        cur['java.vm.specification.version'] = '1.7';
+    
+        cur['java.vm.vendor'] = 'Oracle Corporation';
+    
+        cur['java.vm.version'] = '24.51-b03';
+    
+        cur['junit.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/unittest';
+    
+        cur['lib.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/lib';
+    
+        cur['line.separator'] = '\n';
+    
+        cur['os.arch'] = 'amd64';
+    
+        cur['os.name'] = 'Linux';
+    
+        cur['os.version'] = '3.13.0-24-generic';
+    
+        cur['path.separator'] = ':';
+    
+        cur['source'] = '1.7';
+    
+        cur['src.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/src';
+    
+        cur['sun.arch.data.model'] = '64';
+    
+        cur['sun.boot.class.path'] = '/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/netx.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/plugin.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rhino.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/classes';
+    
+        cur['sun.boot.library.path'] = '/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64';
+    
+        cur['sun.cpu.endian'] = 'little';
+    
+        cur['sun.cpu.isalist'] = '';
+    
+        cur['sun.desktop'] = 'gnome';
+    
+        cur['sun.io.unicode.encoding'] = 'UnicodeLittle';
+    
+        cur['sun.java.command'] = 'org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.blackjack.Junit.HandJunitTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/nikhil/pichigeetha/OODP/OODP/BlackJack/testresults/TEST-com.blackjack.Junit.HandJunitTest.xml crashfile=/home/nikhil/pichigeetha/OODP/OODP/BlackJack/junitvmwatcher4060523772913999148.properties propsfile=/home/nikhil/pichigeetha/OODP/OODP/BlackJack/junit8054412391495596403.properties';
+    
+        cur['sun.java.launcher'] = 'SUN_STANDARD';
+    
+        cur['sun.jnu.encoding'] = 'UTF-8';
+    
+        cur['sun.management.compiler'] = 'HotSpot 64-Bit Tiered Compilers';
+    
+        cur['sun.os.patch.level'] = 'unknown';
+    
+        cur['target'] = '1.7';
+    
+        cur['test.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/src';
+    
+        cur['test.results.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/testresults';
+    
+        cur['user.country'] = 'US';
+    
+        cur['user.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack';
+    
+        cur['user.home'] = '/home/nikhil';
+    
+        cur['user.language'] = 'en';
+    
+        cur['user.name'] = 'nikhil';
+    
+        cur['user.timezone'] = '';
+    
+    cur = TestCases['com.blackjack.Junit.PlayerPanelTest'] = new Array();
+    
+        cur['ant.core.lib'] = '/usr/share/ant/lib/ant.jar';
+    
+        cur['ant.file'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/build.xml';
+    
+        cur['ant.file.BlackJack'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/build.xml';
+    
+        cur['ant.file.type'] = 'file';
+    
+        cur['ant.file.type.BlackJack'] = 'file';
+    
+        cur['ant.home'] = '/usr/share/ant';
+    
+        cur['ant.java.version'] = '1.7';
+    
+        cur['ant.library.dir'] = '/usr/share/ant/lib';
+    
+        cur['ant.project.default-target'] = 'build';
+    
+        cur['ant.project.invoked-targets'] = 'test';
+    
+        cur['ant.project.name'] = 'BlackJack';
+    
+        cur['ant.version'] = 'Apache Ant(TM) version 1.9.3 compiled on April 8 2014';
+    
+        cur['awt.toolkit'] = 'sun.awt.X11.XToolkit';
+    
+        cur['basedir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack';
+    
+        cur['build.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/bin';
+    
+        cur['debuglevel'] = 'source,lines,vars';
+    
+        cur['ECLIPSE_HOME'] = '../../../../../../usr/lib/eclipse';
+    
+        cur['env._'] = '/usr/bin/ant';
+    
+        cur['env.CLUTTER_IM_MODULE'] = 'xim';
+    
+        cur['env.COLORTERM'] = 'gnome-terminal';
+    
+        cur['env.COMPIZ_BIN_PATH'] = '/usr/bin/';
+    
+        cur['env.COMPIZ_CONFIG_PROFILE'] = 'ubuntu';
+    
+        cur['env.DBUS_SESSION_BUS_ADDRESS'] = 'unix:abstract=/tmp/dbus-90JJD86EmR';
+    
+        cur['env.DEFAULTS_PATH'] = '/usr/share/gconf/ubuntu.default.path';
+    
+        cur['env.DESKTOP_SESSION'] = 'ubuntu';
+    
+        cur['env.DISPLAY'] = ':0';
+    
+        cur['env.GDM_LANG'] = 'en_US';
+    
+        cur['env.GDMSESSION'] = 'ubuntu';
+    
+        cur['env.GNOME_DESKTOP_SESSION_ID'] = 'this-is-deprecated';
+    
+        cur['env.GNOME_KEYRING_CONTROL'] = '/run/user/1000/keyring-xcOvoO';
+    
+        cur['env.GNOME_KEYRING_PID'] = '2382';
+    
+        cur['env.GPG_AGENT_INFO'] = '/run/user/1000/keyring-xcOvoO/gpg:0:1';
+    
+        cur['env.GTK_IM_MODULE'] = 'ibus';
+    
+        cur['env.GTK_MODULES'] = 'overlay-scrollbar:unity-gtk-module';
+    
+        cur['env.HOME'] = '/home/nikhil';
+    
+        cur['env.IM_CONFIG_PHASE'] = '1';
+    
+        cur['env.INSTANCE'] = '';
+    
+        cur['env.JOB'] = 'dbus';
+    
+        cur['env.LANG'] = 'en_US.UTF-8';
+    
+        cur['env.LANGUAGE'] = 'en_US';
+    
+        cur['env.LESSCLOSE'] = '/usr/bin/lesspipe %s %s';
+    
+        cur['env.LESSOPEN'] = '| /usr/bin/lesspipe %s';
+    
+        cur['env.LOGNAME'] = 'nikhil';
+    
+        cur['env.LS_COLORS'] = 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:';
+    
+        cur['env.MANDATORY_PATH'] = '/usr/share/gconf/ubuntu.mandatory.path';
+    
+        cur['env.OLDPWD'] = '/home/nikhil/pichigeetha/OODP/OODP';
+    
+        cur['env.PATH'] = '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games';
+    
+        cur['env.PWD'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack';
+    
+        cur['env.QT_QPA_PLATFORMTHEME'] = 'appmenu-qt5';
+    
+        cur['env.QT4_IM_MODULE'] = 'xim';
+    
+        cur['env.SELINUX_INIT'] = 'YES';
+    
+        cur['env.SESSION'] = 'ubuntu';
+    
+        cur['env.SESSION_MANAGER'] = 'local/ubuntu:@/tmp/.ICE-unix/2513,unix/ubuntu:/tmp/.ICE-unix/2513';
+    
+        cur['env.SESSIONTYPE'] = 'gnome-session';
+    
+        cur['env.SHELL'] = '/bin/bash';
+    
+        cur['env.SHLVL'] = '1';
+    
+        cur['env.SSH_AGENT_LAUNCHER'] = 'upstart';
+    
+        cur['env.SSH_AGENT_PID'] = '2457';
+    
+        cur['env.SSH_AUTH_SOCK'] = '/run/user/1000/keyring-xcOvoO/ssh';
+    
+        cur['env.TERM'] = 'xterm';
+    
+        cur['env.TEXTDOMAIN'] = 'im-config';
+    
+        cur['env.TEXTDOMAINDIR'] = '/usr/share/locale/';
+    
+        cur['env.UBUNTU_MENUPROXY'] = '1';
+    
+        cur['env.UPSTART_SESSION'] = 'unix:abstract=/com/ubuntu/upstart-session/1000/2386';
+    
+        cur['env.USER'] = 'nikhil';
+    
+        cur['env.VTE_VERSION'] = '3409';
+    
+        cur['env.WINDOWID'] = '67108875';
+    
+        cur['env.XAUTHORITY'] = '/home/nikhil/.Xauthority';
+    
+        cur['env.XDG_CONFIG_DIRS'] = '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg';
+    
+        cur['env.XDG_CURRENT_DESKTOP'] = 'Unity';
+    
+        cur['env.XDG_DATA_DIRS'] = '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/';
+    
+        cur['env.XDG_GREETER_DATA_DIR'] = '/var/lib/lightdm-data/nikhil';
+    
+        cur['env.XDG_MENU_PREFIX'] = 'gnome-';
+    
+        cur['env.XDG_RUNTIME_DIR'] = '/run/user/1000';
+    
+        cur['env.XDG_SEAT'] = 'seat0';
+    
+        cur['env.XDG_SEAT_PATH'] = '/org/freedesktop/DisplayManager/Seat0';
+    
+        cur['env.XDG_SESSION_ID'] = 'c2';
+    
+        cur['env.XDG_SESSION_PATH'] = '/org/freedesktop/DisplayManager/Session0';
+    
+        cur['env.XDG_VTNR'] = '7';
+    
+        cur['env.XMODIFIERS'] = '@im=ibus';
+    
+        cur['file.encoding'] = 'UTF-8';
+    
+        cur['file.encoding.pkg'] = 'sun.io';
+    
+        cur['file.separator'] = '/';
+    
+        cur['java.awt.graphicsenv'] = 'sun.awt.X11GraphicsEnvironment';
+    
+        cur['java.awt.printerjob'] = 'sun.print.PSPrinterJob';
+    
+        cur['java.class.path'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/lib/junit-4.10.jar:/home/nikhil/pichigeetha/OODP/OODP/BlackJack/bin:/usr/share/ant/lib/junit.jar:/usr/share/java/ant-launcher-1.9.3.jar:/usr/share/ant/lib/ant.jar:/usr/share/ant/lib/ant-junit.jar:/usr/share/ant/lib/ant-junit4.jar';
+    
+        cur['java.class.version'] = '51.0';
+    
+        cur['java.endorsed.dirs'] = '/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/endorsed';
+    
+        cur['java.ext.dirs'] = '/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext';
+    
+        cur['java.home'] = '/usr/lib/jvm/java-7-openjdk-amd64/jre';
+    
+        cur['java.io.tmpdir'] = '/tmp';
+    
+        cur['java.library.path'] = '/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib';
+    
+        cur['java.runtime.name'] = 'OpenJDK Runtime Environment';
+    
+        cur['java.runtime.version'] = '1.7.0_51-b31';
+    
+        cur['java.specification.name'] = 'Java Platform API Specification';
+    
+        cur['java.specification.vendor'] = 'Oracle Corporation';
+    
+        cur['java.specification.version'] = '1.7';
+    
+        cur['java.vendor'] = 'Oracle Corporation';
+    
+        cur['java.vendor.url'] = 'http://java.oracle.com/';
+    
+        cur['java.vendor.url.bug'] = 'http://bugreport.sun.com/bugreport/';
+    
+        cur['java.version'] = '1.7.0_51';
+    
+        cur['java.vm.info'] = 'mixed mode';
+    
+        cur['java.vm.name'] = 'OpenJDK 64-Bit Server VM';
+    
+        cur['java.vm.specification.name'] = 'Java Virtual Machine Specification';
+    
+        cur['java.vm.specification.vendor'] = 'Oracle Corporation';
+    
+        cur['java.vm.specification.version'] = '1.7';
+    
+        cur['java.vm.vendor'] = 'Oracle Corporation';
+    
+        cur['java.vm.version'] = '24.51-b03';
+    
+        cur['junit.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/unittest';
+    
+        cur['lib.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/lib';
+    
+        cur['line.separator'] = '\n';
+    
+        cur['os.arch'] = 'amd64';
+    
+        cur['os.name'] = 'Linux';
+    
+        cur['os.version'] = '3.13.0-24-generic';
+    
+        cur['path.separator'] = ':';
+    
+        cur['source'] = '1.7';
+    
+        cur['src.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/src';
+    
+        cur['sun.arch.data.model'] = '64';
+    
+        cur['sun.boot.class.path'] = '/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/netx.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/plugin.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rhino.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/classes';
+    
+        cur['sun.boot.library.path'] = '/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64';
+    
+        cur['sun.cpu.endian'] = 'little';
+    
+        cur['sun.cpu.isalist'] = '';
+    
+        cur['sun.desktop'] = 'gnome';
+    
+        cur['sun.io.unicode.encoding'] = 'UnicodeLittle';
+    
+        cur['sun.java.command'] = 'org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner com.blackjack.Junit.PlayerPanelTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/nikhil/pichigeetha/OODP/OODP/BlackJack/testresults/TEST-com.blackjack.Junit.PlayerPanelTest.xml crashfile=/home/nikhil/pichigeetha/OODP/OODP/BlackJack/junitvmwatcher4836274752570538936.properties propsfile=/home/nikhil/pichigeetha/OODP/OODP/BlackJack/junit629246428239359424.properties';
+    
+        cur['sun.java.launcher'] = 'SUN_STANDARD';
+    
+        cur['sun.jnu.encoding'] = 'UTF-8';
+    
+        cur['sun.management.compiler'] = 'HotSpot 64-Bit Tiered Compilers';
+    
+        cur['sun.os.patch.level'] = 'unknown';
+    
+        cur['target'] = '1.7';
+    
+        cur['test.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/src';
+    
+        cur['test.results.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack/testresults';
+    
+        cur['user.country'] = 'US';
+    
+        cur['user.dir'] = '/home/nikhil/pichigeetha/OODP/OODP/BlackJack';
+    
+        cur['user.home'] = '/home/nikhil';
+    
+        cur['user.language'] = 'en';
+    
+        cur['user.name'] = 'nikhil';
+    
+        cur['user.timezone'] = '';
+    </script><script type="text/javascript" language="JavaScript">
+        function displayProperties (name) {
+          var win = window.open('','JUnitSystemProperties','scrollbars=1,resizable=1');
+          var doc = win.document;
+          doc.open();
+          doc.write("<html><head><title>Properties of " + name + "</title>");
+          doc.write("<style>")
+          doc.write("body {font:normal 68% verdana,arial,helvetica; color:#000000; }");
+          doc.write("table tr td, table tr th { font-size: 68%; }");
+          doc.write("table.properties { border-collapse:collapse; border-left:solid 1 #cccccc; border-top:solid 1 #cccccc; padding:5px; }");
+          doc.write("table.properties th { text-align:left; border-right:solid 1 #cccccc; border-bottom:solid 1 #cccccc; background-color:#eeeeee; }");
+          doc.write("table.properties td { font:normal; text-align:left; border-right:solid 1 #cccccc; border-bottom:solid 1 #cccccc; background-color:#fffffff; }");
+          doc.write("h3 { margin-bottom: 0.5em; font: bold 115% verdana,arial,helvetica }");
+          doc.write("</style>");
+          doc.write("</head><body>");
+          doc.write("<h3>Properties of " + name + "</h3>");
+          doc.write("<div align=\"right\"><a href=\"javascript:window.close();\">Close</a></div>");
+          doc.write("<table class='properties'>");
+          doc.write("<tr><th>Name</th><th>Value</th></tr>");
+          for (prop in TestCases[name]) {
+            doc.write("<tr><th>" + prop + "</th><td>" + TestCases[name][prop] + "</td></tr>");
+          }
+          doc.write("</table>");
+          doc.write("</body></html>");
+          doc.close();
+          win.focus();
+        }
+      
+      </script>
+</head>
+<body>
+<a name="top"></a>
+<h1>Unit Test Results.</h1>
+<table width="100%">
+<tr>
+<td align="left"></td><td align="right">Designed for use with <a href="http://www.junit.org">JUnit</a> and <a href="http://ant.apache.org/ant">Ant</a>.</td>
+</tr>
+</table>
+<hr size="1">
+<h2>Summary</h2>
+<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tr valign="top">
+<th>Tests</th><th>Failures</th><th>Errors</th><th>Skipped</th><th>Success rate</th><th>Time</th>
+</tr>
+<tr valign="top" class="">
+<td>28</td><td>0</td><td>0</td><td>0</td><td>100.00%</td><td>7.853</td>
+</tr>
+</table>
+<table border="0" width="95%">
+<tr>
+<td style="text-align: justify;">
+        Note: <i>failures</i> are anticipated and checked for with assertions while <i>errors</i> are unanticipated.
+        </td>
+</tr>
+</table>
+<hr size="1" width="95%" align="left">
+<h2>Packages</h2>
+        Note: package statistics are not computed recursively, they only sum up all of its testsuites numbers.
+        <table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tr valign="top">
+<th width="80%">Name</th><th>Tests</th><th>Errors</th><th>Failures</th><th>Skipped</th><th nowrap>Time(s)</th><th nowrap>Time Stamp</th><th>Host</th>
+</tr>
+<tr valign="top" class="">
+<td><a href="#com.blackjack.Junit">com.blackjack.Junit</a></td><td>28</td><td>0</td><td>0</td><td>0</td><td>7.853</td><td>2014-05-29T21:13:55</td><td>ubuntu</td>
+</tr>
+</table>
+<hr size="1" width="95%" align="left">
+<a name="com.blackjack.Junit"></a>
+<h3>Package com.blackjack.Junit</h3>
+<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tr valign="top">
+<th width="80%">Name</th><th>Tests</th><th>Errors</th><th>Failures</th><th>Skipped</th><th nowrap>Time(s)</th><th nowrap>Time Stamp</th><th>Host</th>
+</tr>
+<tr valign="top" class="">
+<td><a href="#BlackJackTest">BlackJackTest</a></td><td>14</td><td>0</td><td>0</td><td>0</td><td>4.005</td><td>2014-05-29T21:13:55</td><td>ubuntu</td>
+</tr>
+<tr valign="top" class="">
+<td><a href="#CardJunitTest">CardJunitTest</a></td><td>7</td><td>0</td><td>0</td><td>0</td><td>0.101</td><td>2014-05-29T21:13:59</td><td>ubuntu</td>
+</tr>
+<tr valign="top" class="">
+<td><a href="#DealerPanelJUnitTest">DealerPanelJUnitTest</a></td><td>2</td><td>0</td><td>0</td><td>0</td><td>0.439</td><td>2014-05-29T21:13:59</td><td>ubuntu</td>
+</tr>
+<tr valign="top" class="">
+<td><a href="#HandJunitTest">HandJunitTest</a></td><td>3</td><td>0</td><td>0</td><td>0</td><td>0.076</td><td>2014-05-29T21:14:00</td><td>ubuntu</td>
+</tr>
+<tr valign="top" class="">
+<td><a href="#PlayerPanelTest">PlayerPanelTest</a></td><td>2</td><td>0</td><td>0</td><td>0</td><td>3.232</td><td>2014-05-29T21:14:00</td><td>ubuntu</td>
+</tr>
+</table>
+<a href="#top">Back to top</a>
+<p></p>
+<p></p>
+<hr size="1" width="95%" align="left">
+<a name="BlackJackTest"></a>
+<h3>TestCase BlackJackTest</h3>
+<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tr valign="top">
+<th>Name</th><th>Status</th><th width="80%">Type</th><th nowrap>Time(s)</th>
+</tr>
+<tr valign="top" class="">
+<td>testgetValue</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="">
+<td>testgetSuitName</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="">
+<td>testgetFaceName</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="">
+<td>testgetlowValue</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="">
+<td>testgetSuit</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="">
+<td>testgetColorName</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="">
+<td>testgetHighValue</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="">
+<td>testisBlackJack</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="">
+<td>testgetBestValue</td><td>Success</td><td></td><td>0.001</td>
+</tr>
+<tr valign="top" class="">
+<td>testisBusted</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="">
+<td>testaskBet</td><td>Success</td><td></td><td>3.748</td>
+</tr>
+<tr valign="top" class="">
+<td>testgetCurrentBet</td><td>Success</td><td></td><td>0.007</td>
+</tr>
+<tr valign="top" class="">
+<td>testcheckAce</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="">
+<td>teststartHand</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+</table>
+<div class="Properties">
+<a href="javascript:displayProperties('com.blackjack.Junit.BlackJackTest');">
+                    Properties &raquo;
+                </a>
+</div>
+<p></p>
+<a href="#top">Back to top</a><a name="CardJunitTest"></a>
+<h3>TestCase CardJunitTest</h3>
+<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tr valign="top">
+<th>Name</th><th>Status</th><th width="80%">Type</th><th nowrap>Time(s)</th>
+</tr>
+<tr valign="top" class="">
+<td>testgetSuitName</td><td>Success</td><td></td><td>0.002</td>
+</tr>
+<tr valign="top" class="">
+<td>testgetSuit</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="">
+<td>testgetHighValue</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="">
+<td>testgetlowValue</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="">
+<td>testgetFaceName</td><td>Success</td><td></td><td>0.001</td>
+</tr>
+<tr valign="top" class="">
+<td>testgetValue</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="">
+<td>testgetColorName</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+</table>
+<div class="Properties">
+<a href="javascript:displayProperties('com.blackjack.Junit.CardJunitTest');">
+                    Properties &raquo;
+                </a>
+</div>
+<p></p>
+<a href="#top">Back to top</a><a name="DealerPanelJUnitTest"></a>
+<h3>TestCase DealerPanelJUnitTest</h3>
+<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tr valign="top">
+<th>Name</th><th>Status</th><th width="80%">Type</th><th nowrap>Time(s)</th>
+</tr>
+<tr valign="top" class="">
+<td>teststartHand</td><td>Success</td><td></td><td>0.001</td>
+</tr>
+<tr valign="top" class="">
+<td>testcheckAce</td><td>Success</td><td></td><td>0.001</td>
+</tr>
+</table>
+<div class="Properties">
+<a href="javascript:displayProperties('com.blackjack.Junit.DealerPanelJUnitTest');">
+                    Properties &raquo;
+                </a>
+</div>
+<p></p>
+<a href="#top">Back to top</a><a name="HandJunitTest"></a>
+<h3>TestCase HandJunitTest</h3>
+<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tr valign="top">
+<th>Name</th><th>Status</th><th width="80%">Type</th><th nowrap>Time(s)</th>
+</tr>
+<tr valign="top" class="">
+<td>testisBusted</td><td>Success</td><td></td><td>0.002</td>
+</tr>
+<tr valign="top" class="">
+<td>testgetBestValue</td><td>Success</td><td></td><td>0.001</td>
+</tr>
+<tr valign="top" class="">
+<td>testisBlackJack</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+</table>
+<div class="Properties">
+<a href="javascript:displayProperties('com.blackjack.Junit.HandJunitTest');">
+                    Properties &raquo;
+                </a>
+</div>
+<p></p>
+<a href="#top">Back to top</a><a name="PlayerPanelTest"></a>
+<h3>TestCase PlayerPanelTest</h3>
+<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tr valign="top">
+<th>Name</th><th>Status</th><th width="80%">Type</th><th nowrap>Time(s)</th>
+</tr>
+<tr valign="top" class="">
+<td>testgetCurrentBet</td><td>Success</td><td></td><td>0.112</td>
+</tr>
+<tr valign="top" class="">
+<td>testaskBet</td><td>Success</td><td></td><td>3.041</td>
+</tr>
+</table>
+<div class="Properties">
+<a href="javascript:displayProperties('com.blackjack.Junit.PlayerPanelTest');">
+                    Properties &raquo;
+                </a>
+</div>
+<p></p>
+<a href="#top">Back to top</a>
+</body>
+</html>

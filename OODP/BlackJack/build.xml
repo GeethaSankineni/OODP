@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+<project basedir="." default="build" name="BlackJack">
+	<property name="src.dir" location="src" />
+	<property name="build.dir" location="bin" />
+	<property name="junit.dir" location="unittest" />
+	 <property name="lib.dir" location="lib" />
+	<property environment="env"/>
+	<property name="ECLIPSE_HOME" value="../../../../../../usr/lib/eclipse"/>
+	<property name="debuglevel" value="source,lines,vars"/>
+	<property name="target" value="1.7"/>
+	<property name="source" value="1.7"/>
+	  <property name="test.dir" location="src" />
+	  <property name="test.results.dir" location="testresults" />
+	  <path id="junit.class.path">
+	    <pathelement location="${lib.dir}/junit-4.10.jar" />
+	    <pathelement location="${build.dir}" />
+	  </path>
+	<path id="BlackJack.classpath">
+		<pathelement location="bin"/>
+		<pathelement location="lib/hamcrest-core-1.3.jar"/>
+		<pathelement location="lib/junit-4.10.jar"/>
+	</path>
+	<target name="init">
+		<mkdir dir="bin"/>
+		<copy includeemptydirs="false" todir="bin">
+			<fileset dir="src">
+				<exclude name="**/*.java"/>
+			</fileset>
+		</copy>
+		<copy includeemptydirs="false" todir="bin">
+			<fileset dir="unittest">
+				<exclude name="**/*.java"/>
+			</fileset>
+		</copy>
+	</target>
+	<target name="clean">
+		<delete dir="bin"/>
+	</target>
+	<target depends="clean" name="cleanall"/>
+	<target depends="build-subprojects,build-project" name="build"/>
+	<target name="build-subprojects"/>
+	<target depends="init" name="build-project">
+		<echo message="${ant.project.name}: ${ant.file}"/>
+		<javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+			<src path="src"/>
+			<src path="unittest"/>
+			<classpath refid="BlackJack.classpath"/>
+		</javac>
+	</target>
+	 <target name="compile" depends="clean, init">
+	    <javac  srcdir="${src.dir}" destdir="${build.dir}">
+	      <classpath refid="junit.class.path" />
+	    </javac>
+
+	  </target>
+	 <target name="blackjack-jar" depends="compile, build">
+	    <jar destfile="BlackJackGame.jar" basedir="${build.dir}">
+	      <manifest>
+	        <attribute name="Main-Class" value="com.blackjack.GUI.BlackjackGUIGame" />
+	      </manifest>
+	    </jar>
+	  </target>
+	  
+	<target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+	<target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+		<copy todir="${ant.library.dir}">
+			<fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+		</copy>
+		<unzip dest="${ant.library.dir}">
+			<patternset includes="jdtCompilerAdapter.jar"/>
+			<fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+		</unzip>
+	</target>
+	<target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+		<property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+		<antcall target="build"/>
+	</target>
+	<target name="BlackjackGUIGame">
+		<java classname="com.blackjack.GUI.BlackjackGUIGame" failonerror="true" fork="yes">
+			<classpath refid="BlackJack.classpath"/>
+		</java>
+	</target>
+	 <target name="blackjacktest" depends="compile,build">
+	    <junit printsummary="on" fork="true" haltonfailure="yes">
+	      <classpath refid="junit.class.path" />
+	      <formatter type="xml" />
+	      <batchtest todir="${test.results.dir}">
+	        <fileset dir="${src.dir}">
+	          <include name="**/*Test*.java" />
+	        </fileset>
+	      </batchtest>
+	    </junit>
+	  </target>
+	  
+	  <target name="test" depends="blackjacktest">
+	        <junitreport todir="${test.results.dir}">
+	            <fileset dir="${test.results.dir}">
+	                <include name="TEST-*.xml" />
+	            </fileset>
+	            <report format="noframes" todir="${test.results.dir}\html\" />
+	        </junitreport>
+	    </target>
+
+</project>
