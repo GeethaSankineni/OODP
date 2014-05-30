@@ -29,7 +29,7 @@ Step 1: Install ant
 Command:  sudo apt-get install ant  
 Step 2: To run the application 
 Command:    ant build 
-            ant BlackJackGame
+            ant BlackjackGUIGame
 Step 3: run unit test. 
 Command:  ant test
 Step 4: To generate a jar file
